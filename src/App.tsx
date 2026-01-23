@@ -8,18 +8,18 @@ import Education from "./components/education";
 // import Projects from "./components/Projects";
 // import { Feat } from "./components/feat";
 import { lazy } from "react";
-const Feat = lazy(() => import("./components/feat"))
+const Feat = lazy(() => import("./components/feat"));
 export function App() {
   return (
     <SectionWrapper>
       {/* header */}
       <Header />
       {/* Hero */}
-      <Section>
+      <Section className="relative h-[80vh] flex items-center justify-start gap-4">
         <Hero />
       </Section>
 
-      <div className="h-20" />
+      <div className="min-h-20" />
       <Section>
         <Feat />
       </Section>
@@ -35,7 +35,7 @@ export function App() {
         <Skills />
       </Section>
 
-      <div className="h-20" />
+      {/* <div className="h-20" /> */}
       {/* Projets */}
       {/* <Section>
         <Projects />

@@ -28,7 +28,7 @@ export function SectionWrapper({
           "h-135 pt-2",
         )}
       />
-      <div className={"mx-auto max-w-4xl text-center  "}>{children}</div>
+      <div className={"mx-auto max-w-4xl text-center "}>{children}</div>
     </section>
   );
 }

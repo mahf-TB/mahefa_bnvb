@@ -25,7 +25,7 @@ const Education = () => {
                 href={education.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-x-3 justify-between group"
+                className="flex sm:flex-row flex-col sm:items-center  sm:gap-3 gap-2 justify-between group"
               >
                 <div className="flex items-center gap-x-3 flex-1 min-w-0">
                   {education.logoUrl ? (
@@ -61,7 +61,7 @@ const Education = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
+                <div className="flex items-center ml-12 gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
                   {education.start === education.end ? (
                     <span>{education.start}</span>
                   ) : (
