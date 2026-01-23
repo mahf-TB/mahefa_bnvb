@@ -43,10 +43,10 @@ export const Header = () => {
           <a
             href="https://github.com/mahf-TB"
             target="_blank"
-            className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0 ")}
+            className={cn(buttonVariants({ variant: "outline" , size:"lg" }), "size-10 p-0 ")}
           >
             <GitHubIcons
-              size={16}
+              size={18}
               className="text-white hover:text-green4 transition-colors"
             ></GitHubIcons>
           </a>
@@ -54,20 +54,20 @@ export const Header = () => {
           <a
             href="https://www.linkedin.com/in/mahefa-bienvenu-575188287/"
             target="_blank"
-            className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}
+            className={cn(buttonVariants({ variant: "outline" }), "size-10 p-0")}
           >
             <LinkedinIcon
-              size={16}
+              size={18}
               className="text-white hover:text-green4 transition-colors"
             ></LinkedinIcon>
           </a>
           <a
             href="mailto:mahefatsilavirintsoa@gmail.com"
             target="_blank"
-            className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}
+            className={cn(buttonVariants({ variant: "outline" }), "size-10 p-0")}
           >
             <MailIcon
-              size={16}
+              size={18}
               className="text-white hover:text-green4 transition-colors"
             ></MailIcon>
           </a>
@@ -75,7 +75,7 @@ export const Header = () => {
             href="/pdf/CV-ANDRIMAHEFA-Fullstack.pdf"
             download
             aria-label="Télécharger CV-ANDRIMAHEFA-Fullstack"
-            className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}
+            className={cn(buttonVariants({ variant: "outline" }), "size-10 p-0")}
           >
             <HugeiconsIcon icon={DownloadIcon} strokeWidth={2} />
           </a>

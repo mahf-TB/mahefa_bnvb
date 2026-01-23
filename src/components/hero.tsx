@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 export const Hero = () => {
   return (
-    <Section className="relative h-[60vh] flex items-center justify-start gap-4 ">
+    <Section className="relative h-[80vh] flex items-center justify-start gap-4 ">
       <div className="relative z-10 mx-auto max-w-4xl text-left mt-72">
         <div className="inline-flex items-center gap-2 px-4 py-2 mr-auto rounded-full bg-white/10 backdrop-blur-sm text-white mb-6">
           <HugeiconsIcon icon={Sparkles} strokeWidth={2} />
@@ -47,31 +47,4 @@ export const Hero = () => {
   );
 };
 
-{
-  /* <div className="flex flex-col gap-2 max-md:w-full">
-        <div className="flex items-center gap-4">
-          <div className="min-w-20 h-20 md:ml-5 bg-green4 rounded-full overflow-hidden  ">
-            <img
-              src="/images/photo.jpg"
-              alt="Profile"
-              className="w-full h-full shadow-green4 rounded-t-full object-cover"
-            />
-          </div>
-          <div className="text-left">
-            <h2 className="font-PoppinsBlack text-4xl max-md:text-lg text-primary">
-              I&apos;m Mahefa Bienvenu
-            </h2>
-            <span className="text-green4 max-md:text-sm font-black">
-              🚀 Software Engineer | Building APIs & Scalable SaaS Projects ✅  💻
-            </span>
-          </div>
-        </div>
-        <span className="md:ml-5 max-md:mt-0 mt-5 text-sm text-muted-foreground">
-          Passionné par le développement full-stack, j’ai plus de 2 ans
-          d’expérience en création d’applications web et mobiles. Actuellement
-          en Master 1 Génie Logiciel & Bases de Données (ENI Fianarantsoa,
-          Madagascar), je combine rigueur et autonomie pour transformer des
-          idées complexes en solutions innovantes et efficaces.
-        </span>
-      </div> */
-}
+

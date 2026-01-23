@@ -1,13 +1,14 @@
 import { Hero } from "./components/hero";
 import SectionWrapper from "./components/section-wrapper";
-
 import Section from "./components/section";
 import { Header } from "./components/header";
 import WorkExperience from "./components/work-experience";
 import Skills from "./components/skills";
 import Education from "./components/education";
-import Projects from "./components/Projects";
-
+// import Projects from "./components/Projects";
+// import { Feat } from "./components/feat";
+import { lazy } from "react";
+const Feat = lazy(() => import("./components/feat"))
 export function App() {
   return (
     <SectionWrapper>
@@ -18,7 +19,11 @@ export function App() {
         <Hero />
       </Section>
 
-      <div className="h-50" />
+      <div className="h-20" />
+      <Section>
+        <Feat />
+      </Section>
+      <div className="h-20" />
       {/* Experience */}
       <Section>
         <WorkExperience />
@@ -32,9 +37,9 @@ export function App() {
 
       <div className="h-20" />
       {/* Projets */}
-      <Section>
+      {/* <Section>
         <Projects />
-      </Section>
+      </Section> */}
 
       <div className="h-20" />
       {/* Education */}

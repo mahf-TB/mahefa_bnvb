@@ -1,19 +1,33 @@
 import { Csharp } from "@/components/icons/Csharp";
 import { Docker } from "@/components/icons/Docker";
+import { Elementor } from "@/components/icons/Elementor";
+import { Expressjs } from "@/components/icons/Expressjs";
 import { Golang } from "@/components/icons/Golang";
 import { Java } from "@/components/icons/java";
-import { Kubernetes } from "@/components/icons/kubernetes";
+import Laravel from "@/components/icons/Laravel";
+import MongoDB from "@/components/icons/MongoDb";
+import Nestjs from "@/components/icons/Nestjs";
 import { NextjsIconDark } from "@/components/icons/nextjsIconDark";
 import { Nodejs } from "@/components/icons/nodejs";
+import Nuxt from "@/components/icons/Nuxt";
+import { OpenCV } from "@/components/icons/OpenCV";
+import { Oracle } from "@/components/icons/Oracle";
+import PHP from "@/components/icons/PHP";
 import { Postgresql } from "@/components/icons/postgresql";
 import { Python } from "@/components/icons/python";
 import { ReactDark } from "@/components/icons/reactDark";
 import { ReactLight } from "@/components/icons/reactLight";
+import { Shadcn } from "@/components/icons/shadcn";
+import { Tailwindcss } from "@/components/icons/Tailwindcss";
 import { Typescript } from "@/components/icons/typescript";
+import { Woocommerce } from "@/components/icons/Woocommerce";
+import { WordPress } from "@/components/icons/Wordpress";
+import { Zustand } from "@/components/icons/Zustand";
+import { projects } from "./projects";
 
 export const DATA = {
   name: "ANDRIMAHEFA Tsilavirintsoa Bienvenu",
-  role: "Développeur Full-Stack Web & Mobile",
+  role: "🚀 Software Engineer | Building APIs & Scalable SaaS Projects ✅  💻",
   location: "Madagascar",
   shortDescription:
     "Développeur full-stack passionné par la création d’applications web et mobiles performantes, orientées expérience utilisateur et valeur business.",
@@ -32,13 +46,17 @@ export const DATA = {
     { name: "Next.js", icon: NextjsIconDark },
     { name: "Typescript", icon: Typescript },
     { name: "Node.js", icon: Nodejs },
+    { name: "Nest.js", icon: Nestjs },
     { name: "Python", icon: Python },
     { name: "Go", icon: Golang },
     { name: "Postgres", icon: Postgresql },
     { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
+    { name: "MongoDB", icon: MongoDB },
     { name: "Java", icon: Java },
     { name: "C++", icon: Csharp },
+    { name: "Laravel", icon: Laravel },
+    { name: "PHP", icon: PHP },
+    { name: "Zustand", icon: Zustand },
   ],
   experiences: [
     {
@@ -50,12 +68,24 @@ export const DATA = {
         "Conception et développement du site AlteraPlus, une plateforme e-commerce dédiée à une coach professionnelle proposant des formations pour particuliers (B2C) et entreprises (B2B). Le site intègre la vente de formations, la gestion des contacts, des campagnes email automatisées et un espace blog pour le contenu éducatif. Mise en place d’un tunnel de vente optimisé et d’un système de communication automatisé pour améliorer la conversion et la fidélisation.",
       image: "/images/1.png",
       links: [
-        { title: "WordPress", href: "https://wordpress.org" },
-        { title: "WooCommerce", href: "https://woocommerce.com" },
-        { title: "Elementor", href: "https://elementor.com" },
+        {
+          title: "WordPress",
+          icon: <WordPress className="h-4 w-4" />,
+          href: "https://wordpress.org",
+        },
+        {
+          title: "WooCommerce",
+          icon: <Woocommerce className="h-4 w-4" />,
+          href: "https://woocommerce.com",
+        },
+        {
+          title: "Elementor",
+          icon: <Elementor className="h-4 w-4" />,
+          href: "https://elementor.com",
+        },
         {
           title: "PHP",
-          icon: <ReactDark className="h-4 w-4" />,
+          icon: <PHP className="h-4 w-4" />,
           href: "https://www.php.net",
         },
         { title: "Email Marketing", href: "https://mailchimp.com" },
@@ -74,15 +104,31 @@ export const DATA = {
           icon: <ReactDark className="h-4 w-4" />,
           href: "https://react.dev",
         },
-        { title: "Express.js", href: "https://expressjs.com" },
-        { title: "MongoDB", href: "https://www.mongodb.com" },
-        { title: "OpenCV", href: "https://opencv.org" },
+        {
+          title: "Express.js",
+          icon: <Expressjs className="h-4 w-4" />,
+          href: "https://expressjs.com",
+        },
+        {
+          title: "MongoDB",
+          icon: <MongoDB className="h-4 w-4" />,
+          href: "https://www.mongodb.com",
+        },
+        {
+          title: "OpenCV",
+          icon: <OpenCV className="h-4 w-4" />,
+          href: "https://opencv.org",
+        },
         {
           title: "Tailwind CSS",
-          // icon: TailwindcssIcon,
+          icon: <Tailwindcss className="h-4 w-4" />,
           href: "https://tailwindcss.com",
         },
-        { title: "Shadcn/UI", href: "https://ui.shadcn.com" },
+        {
+          title: "Shadcn/UI",
+          icon: <Shadcn className="h-4 w-4" />,
+          href: "https://ui.shadcn.com",
+        },
       ],
     },
 
@@ -114,7 +160,16 @@ export const DATA = {
           icon: <Postgresql className="h-4 w-4" />,
           href: "https://www.mongodb.com",
         },
-        { title: "Zustand", href: "https://zustand-demo.pmnd.rs" },
+        {
+          title: "Zustand",
+          icon: <Zustand className="h-4 w-4" />,
+          href: "https://zustand-demo.pmnd.rs",
+        },
+        {
+          title: "Shadcn/UI",
+          icon: <Shadcn className="h-4 w-4" />,
+          href: "https://ui.shadcn.com",
+        },
       ],
     },
 
@@ -126,11 +181,31 @@ export const DATA = {
         "Conception et développement d’une application de suivi et de gestion de l’évolution de carrière des agents, permettant un accès en temps réel aux changements de statut et promotions. Interface intuitive ayant réduit significativement le temps de navigation.",
       image: "/images/mfe.png",
       links: [
-        { title: "Laravel", href: "https://laravel.com" },
-        { title: "PHP", href: "https://www.php.net" },
-        { title: "Vue.js", href: "https://vuejs.org" },
-        { title: "Oracle Database", href: "https://www.oracle.com/database" },
-        { title: "Tailwind CSS", href: "https://tailwindcss.com" },
+        {
+          title: "Laravel",
+          icon: <Laravel className="h-4 w-4" />,
+          href: "https://laravel.com",
+        },
+        {
+          title: "PHP",
+          icon: <PHP className="h-4 w-4" />,
+          href: "https://www.php.net",
+        },
+        {
+          title: "Vue.js",
+          icon: <Nuxt className="h-4 w-4" />,
+          href: "https://vuejs.org",
+        },
+        {
+          title: "Oracle Database",
+          icon: <Oracle className="h-4 w-4" />,
+          href: "https://www.oracle.com/database",
+        },
+        {
+          title: "Tailwind CSS",
+          icon: <Tailwindcss className="h-4 w-4" />,
+          href: "https://tailwindcss.com",
+        },
       ],
     },
   ],
@@ -140,7 +215,8 @@ export const DATA = {
       href: "https://eni.mg",
       degree: "Master 2 en Informatique – Génie Logiciel & Bases de Données",
       location: "Fianarantsoa, Madagascar",
-      logoUrl: "https://eni.mg/wp-content/uploads/2023/12/cropped-cropped-ENI_logo-removebg-preview-1-57x57.png",
+      logoUrl:
+        "https://eni.mg/wp-content/uploads/2023/12/cropped-cropped-ENI_logo-removebg-preview-1-57x57.png",
       start: "2025",
       end: "Actuellement",
     },
@@ -149,7 +225,8 @@ export const DATA = {
       href: "https://eni.mg",
       degree: "Licence 3 en Informatique – Génie Logiciel & Bases de Données",
       location: "Fianarantsoa, Madagascar",
-      logoUrl: "https://eni.mg/wp-content/uploads/2023/12/cropped-cropped-ENI_logo-removebg-preview-1-57x57.png",
+      logoUrl:
+        "https://eni.mg/wp-content/uploads/2023/12/cropped-cropped-ENI_logo-removebg-preview-1-57x57.png",
       start: "2022",
       end: "2024",
     },
@@ -163,4 +240,5 @@ export const DATA = {
       end: "2021",
     },
   ],
+  projects,
 };

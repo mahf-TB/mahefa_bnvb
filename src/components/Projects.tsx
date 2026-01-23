@@ -1,3 +1,4 @@
+import Featured from "./featured";
 import { HeaderSection } from "./header-section";
 
 const Projects = () => {
@@ -11,7 +12,7 @@ const Projects = () => {
             et assistants vocaux, chaque projet reflète ma capacité à résoudre
             des problèmes complexes avec du code propre et efficace."
         />
-        Projects works!
+       <Featured />
       </div>
     </div>
   );

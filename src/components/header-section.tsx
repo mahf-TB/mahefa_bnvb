@@ -3,8 +3,8 @@ export const HeaderSection = ({
   description,
   slug,
 }: {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   slug?: string;
 }) => {
   return (
