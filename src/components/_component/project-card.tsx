@@ -21,7 +21,7 @@ const ProjectCard: React.FC<Props> = ({
   className = "",
 }) => {
   return (
-    <Card className={`bg-background group overflow-hidden shadow-zinc-950/5 sm:col-span-3 sm:rounded-none sm:rounded-tl-xl border-0 ${className}`}>
+    <Card className={`bg-background group overflow-hidden shadow-zinc-950/5 sm:col-span-3 sm:rounded-none sm:rounded-tl-xl border-0 border-white/20 ${className}`}>
       <CardHeader>
         <div className="relative z-10 text-left">
           <div className=" flex items-center gap-2">

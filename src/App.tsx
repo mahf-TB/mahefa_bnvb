@@ -6,9 +6,9 @@ import WorkExperience from "./components/work-experience";
 import Skills from "./components/skills";
 import Education from "./components/education";
 // import Projects from "./components/Projects";
-// import { Feat } from "./components/feat";
-import { lazy } from "react";
-const Feat = lazy(() => import("./components/feat"));
+import Feat from "./components/feat";
+// import { lazy } from "react";
+// const Feat = lazy(() => import("./components/feat"));
 export function App() {
   return (
     <SectionWrapper>

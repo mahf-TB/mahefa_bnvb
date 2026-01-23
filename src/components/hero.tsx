@@ -11,8 +11,8 @@ export const Hero = () => {
           Transformez vos idées en solutions numériques
         </span>
       </div>
-      <h1 className="text-2xl font-extrabold tracking-tight text-white sm:text-6xl">
-        Créer des Applications{" "}
+      <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-6xl">
+        Créer des Applications
         <span className="relative ">Modernes & Performantes</span>
       </h1>
 

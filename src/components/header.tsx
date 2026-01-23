@@ -23,7 +23,7 @@ export const Header = () => {
       className={cn(
         "z-999 text-white fixed p-2 left-0 top-0 right-0  transition-colors",
         scrolled
-          ? "bg-foreground/95  backdrop-blur supports-backdrop-filter:bg-background/60 "
+          ? "backdrop-blur bg-background/95 supports-backdrop-filter:bg-background/60 "
           : "bg-transparent",
       )}
     >
