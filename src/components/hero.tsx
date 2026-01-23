@@ -29,13 +29,17 @@ export const Hero = () => {
             <span className="ml-2"> Voir mes projets</span>
           </Button>
 
-          <Button
-            size="lg"
-            variant="outline"
-            className="sm:px-10 px-5 py-5 rounded-full border-white/20 text-white hover:bg-white/10"
+          <a
+            href="https://wa.me/261331718939"
           >
-            Me contacter
-          </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="sm:px-10 px-5 py-5 rounded-full border-white/20 text-white hover:bg-white/10"
+            >
+              Me contacter
+            </Button>
+          </a>
         </div>
       </div>
     </div>
