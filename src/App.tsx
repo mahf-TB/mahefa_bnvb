@@ -30,13 +30,13 @@ export function App() {
         <Skills />
       </Section>
 
-      <div className="h-50" />
+      <div className="h-20" />
       {/* Projets */}
       <Section>
         <Projects />
       </Section>
 
-      <div className="h-50" />
+      <div className="h-20" />
       {/* Education */}
       <Section>
         <Education />
