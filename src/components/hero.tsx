@@ -6,16 +6,15 @@ import { Button } from "./ui/button";
 
 export const Hero = () => {
   return (
-    <Section className="relative h-[60vh] flex items-center justify-center gap-4 ">
-      <div className="relative z-10 mx-auto max-w-4xl text-center mt-72">
+    <Section className="relative h-[60vh] flex items-center justify-start gap-4 ">
+      <div className="relative z-10 mx-auto max-w-4xl text-left mt-72">
         <div className="inline-flex items-center gap-2 px-4 py-2 mr-auto rounded-full bg-white/10 backdrop-blur-sm text-white mb-6">
           <HugeiconsIcon icon={Sparkles} strokeWidth={2} />
-
-          <span className="text-sm font-medium">
+          <span className="sm:text-sm text-xs font-normal sm:font-medium whitespace-nowrap">
             Transformez vos idées en solutions numériques
           </span>
         </div>
-        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+        <h1 className="text-2xl font-extrabold tracking-tight text-white sm:text-6xl">
           Créer des Applications{" "}
           <span className="relative ">Modernes & Performantes</span>
         </h1>
@@ -27,7 +26,7 @@ export const Hero = () => {
         </p>
 
         <div className="mb-5">
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center justify-start gap-4">
 
               <Button size="lg"  className="rounded-full px-10">
                 <HugeiconsIcon icon={WorkIcon} strokeWidth={2} />

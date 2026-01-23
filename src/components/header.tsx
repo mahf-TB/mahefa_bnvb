@@ -31,8 +31,8 @@ export const Header = () => {
         <div className="flex items-center gap-2">
           <h1 className="text-lg  text-white flex items-center gap-2">
             {/* <LogoMB /> */}
-            <AvatarUser alt="User Avatar" src="/images/photo.jpg"  fallback="UB" className="size-10" />
-            <div className="text-left ml-2" >
+            <AvatarUser alt="User Avatar" src="/images/me.jpg"  fallback="MB" className="size-10" />
+            <div className="text-left ml-2 max-sm:hidden" >
               <span className="font-PoppinsBlack">Mahefa Bienvenu</span>
               <p className="text-xs text-b">🚀 Software Engineer | Building APIs & Scalable SaaS Projects ✅ 💻</p>
             </div>
