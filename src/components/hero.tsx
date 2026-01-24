@@ -1,5 +1,5 @@
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Sparkles, WorkIcon } from "@hugeicons/core-free-icons";
+import { Download, Sparkles, WorkIcon } from "@hugeicons/core-free-icons";
 import { Button } from "./ui/button";
 
 import { BlurFade } from "./ui/blur-fade";
@@ -28,16 +28,20 @@ export const Hero = () => {
       </p>
       <div className="z-50 mb-5">
         <div className="mt-10 flex flex-nowrap items-center justify-start gap-4">
-          <Button size="lg" className="rounded-full sm:px-10 px-5 py-5">
-            <HugeiconsIcon icon={WorkIcon} strokeWidth={2} />
-            <span className="ml-2"> Voir mes projets</span>
+           <a href="/pdf/CV-ANDRIMAHEFA-Fullstack.pdf" download>
+          <Button size="lg" className="rounded-full sm:px-10 px-3 py-5 hover:bg-primary/80">
+            <HugeiconsIcon icon={Download} strokeWidth={2} />
+            <span className="ml-2"> Télécharger mon CV</span>
           </Button>
+           </a>
+          
+            
 
           <a href="https://wa.me/261331718939">
             <Button
               size="lg"
               variant="outline"
-              className="sm:px-10 px-5 py-5 rounded-full border-white/20 text-white hover:bg-white/10"
+              className="sm:px-10 px-3 py-5 rounded-full border-white/20 text-white hover:bg-white/10"
             >
               Me contacter
             </Button>

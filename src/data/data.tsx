@@ -21,7 +21,6 @@ import { Typescript } from "@/components/icons/typescript";
 import { Woocommerce } from "@/components/icons/Woocommerce";
 import { WordPress } from "@/components/icons/Wordpress";
 import { Zustand } from "@/components/icons/Zustand";
-import { projects } from "./projects.data";
 import { ReactQuery } from "@/components/icons/ReactQuery";
 import { Redis } from "@/components/icons/Redis";
 
@@ -242,6 +241,5 @@ export const DATA = {
       start: "2021",
       end: "2021",
     },
-  ],
-  projects,
+  ]
 };
