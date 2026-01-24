@@ -11,7 +11,7 @@ export const Shadcn = (props: SVGProps<SVGSVGElement>) => (
       }
 
       .st1 {
-        stroke: #000;
+        stroke: #FFF;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;

@@ -23,7 +23,9 @@ import { Typescript } from "@/components/icons/typescript";
 import { Woocommerce } from "@/components/icons/Woocommerce";
 import { WordPress } from "@/components/icons/Wordpress";
 import { Zustand } from "@/components/icons/Zustand";
-import { projects } from "./projects";
+import { projects } from "./projects.data";
+import { ReactQuery } from "@/components/icons/ReactQuery";
+import { Redis } from "@/components/icons/Redis";
 
 export const DATA = {
   name: "ANDRIMAHEFA Tsilavirintsoa Bienvenu",
@@ -45,18 +47,20 @@ export const DATA = {
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
     { name: "Typescript", icon: Typescript },
+    { name: "Shadcn/ui", icon: Shadcn },
     { name: "Node.js", icon: Nodejs },
     { name: "Nest.js", icon: Nestjs },
     { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
+    { name: "TailwindCss", icon: Tailwindcss },
     { name: "Postgres", icon: Postgresql },
     { name: "Docker", icon: Docker },
     { name: "MongoDB", icon: MongoDB },
     { name: "Java", icon: Java },
-    { name: "C++", icon: Csharp },
     { name: "Laravel", icon: Laravel },
     { name: "PHP", icon: PHP },
     { name: "Zustand", icon: Zustand },
+    { name: "React Query", icon: ReactQuery },
+    { name: "Redis", icon: Redis },
   ],
   experiences: [
     {
@@ -232,7 +236,7 @@ export const DATA = {
     },
     {
       school: "Lycée AMJ Ambalavao",
-      href: "https://lycee-amj.mg",
+      href: "#",
       degree: "Baccalauréat Série C",
       location: "Ambalavao, Fianarantsoa, Madagascar",
       logoUrl: "",

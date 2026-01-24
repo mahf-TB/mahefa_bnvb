@@ -3,14 +3,17 @@ import { cn } from "@/lib/utils";
 import { DownloadIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import AvatarUser from "./_component/avatar";
 import { GitHubIcons } from "./icons/GitHubIcons";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { MailIcon } from "./icons/MailIcon";
 import Section from "./section";
-import AvatarUser from "./_component/avatar";
+
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -27,18 +30,19 @@ export const Header = () => {
           : "bg-transparent",
       )}
     >
-      <Section className="flex items-center ">
-        <div className="flex items-center gap-2">
+      <Section className="flex items-center mx-auto">
+        <Link to={location.pathname !== "/about" ? "/about" : "/"} className="flex items-center gap-2">
           <h1 className="text-lg  text-white flex items-center gap-2">
-            {/* <LogoMB /> */}
             <AvatarUser alt="User Avatar" src="/images/me.jpg"  fallback="MB" className="size-10" />
             <div className="text-left ml-2 max-sm:hidden" >
               <span className="font-PoppinsBlack">Mahefa Bienvenu</span>
               <p className="text-xs text-b">🚀 Software Engineer | Building APIs & Scalable SaaS Projects ✅ 💻</p>
             </div>
           </h1>
-        </div>
+        </Link>
         <div className="flex-1"></div>
+        
+
         <ul className="flex items-center gap-2">
           <a
             href="https://github.com/mahf-TB"

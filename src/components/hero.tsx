@@ -1,37 +1,39 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Sparkles, WorkIcon } from "@hugeicons/core-free-icons";
 import { Button } from "./ui/button";
+import { TopSkin } from "./_component/top-skin";
+import { BlurFade } from "./ui/blur-fade";
 
 export const Hero = () => {
   return (
-    <div className="relative z-10 mx-auto max-w-4xl text-left mt-72">
-      <div className="inline-flex items-center gap-2 px-4 py-2 mr-auto rounded-full bg-white/10 backdrop-blur-sm text-white mb-6">
+    <div className="relative z-10 mx-auto max-w-4xl text-left">
+      <div className="h-50"/>
+
+      <div className="z-50 inline-flex items-center gap-2 px-4 py-2 mr-auto rounded-full bg-white/10 backdrop-blur-sm text-white mb-6">
         <HugeiconsIcon icon={Sparkles} strokeWidth={2} />
         <span className="sm:text-sm text-xs font-normal sm:font-medium whitespace-nowrap">
           Transformez vos idées en solutions numériques
         </span>
       </div>
-      <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-6xl">
-        Créer des Applications
-        <span className="relative ">Modernes & Performantes</span>
-      </h1>
+      <BlurFade>
 
-      <p className="mt-6 text-muted-foreground">
+      <h1 className="z-50 text-3xl font-extrabold tracking-tight text-white sm:text-6xl">
+        Créer des Applications
+        <span className="relative pl-3 ">Modernes & Performantes</span>
+      </h1>
+      <p className="z-50 mt-6 text-muted-foreground">
         Je conçois des solutions logicielles sur mesure : applications web,
         mobiles et systèmes de gestion, en mettant l’accent sur la performance,
         la sécurité et l’expérience utilisateur.
       </p>
-
-      <div className="mb-5">
+      <div className="z-50 mb-5">
         <div className="mt-10 flex flex-nowrap items-center justify-start gap-4">
           <Button size="lg" className="rounded-full sm:px-10 px-5 py-5">
             <HugeiconsIcon icon={WorkIcon} strokeWidth={2} />
             <span className="ml-2"> Voir mes projets</span>
           </Button>
 
-          <a
-            href="https://wa.me/261331718939"
-          >
+          <a href="https://wa.me/261331718939">
             <Button
               size="lg"
               variant="outline"
@@ -42,6 +44,10 @@ export const Hero = () => {
           </a>
         </div>
       </div>
+      </BlurFade>
+
+
+      
     </div>
   );
 };

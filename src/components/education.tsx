@@ -1,10 +1,14 @@
-
 import { HeaderSection } from "./header-section";
 import { BlurFade } from "./ui/blur-fade";
 import { BLUR_FADE_DELAY } from "@/constant";
 import { DATA } from "@/data/data";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Link, Location } from "@hugeicons/core-free-icons";
+import {
+  ArrowUpRight,
+  Link,
+  Location,
+  SquareArrowUpRight,
+} from "@hugeicons/core-free-icons";
 
 const Education = () => {
   return (
@@ -40,12 +44,14 @@ const Education = () => {
                   <div className="flex-1 min-w-0 flex flex-col gap-0.5">
                     <div className="font-semibold leading-none flex items-center gap-2">
                       {education.school}
-                      <HugeiconsIcon
-                        icon={Link}
-                        name="external-link"
-                        className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
-                        aria-hidden
-                      />
+                      {education.href && (
+                        <HugeiconsIcon
+                          icon={SquareArrowUpRight}
+                          name="external-link"
+                          className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+                          aria-hidden
+                        />
+                      )}
                     </div>
                     <div className="font-sans text-left text-sm text-muted-foreground">
                       {education.degree}

@@ -1,17 +1,18 @@
+import { Card, CardHeader } from "@/components/ui/card";
 import React from "react";
-import { Card, CardHeader } from "../ui/card";
+
 
 type Props = {
   title?: string;
   description?: string;
-  logoSrc?: string;
-  imageSrc?: string;
+  logoSrc?:  string | React.ReactNode;
+  imageSrc?: string | string[];
   imageAlt?: string;
   bullets?: string[];
   className?: string;
 };
 
-const ProjectCard: React.FC<Props> = ({
+const FeatureCard: React.FC<Props> = ({
   title,
   description,
   logoSrc,
@@ -27,7 +28,11 @@ const ProjectCard: React.FC<Props> = ({
           <div className=" flex items-center gap-2">
             {logoSrc && (
               <div className="relative bg-white flex aspect-square  min-w-12 h-12 overflow-hidden p-2 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
-                <img src={logoSrc} className="m-auto object-contain" alt={`${title} logo`} />
+                {typeof logoSrc === "string" ? (
+                  <img src={logoSrc} className="m-auto object-contain" alt={`${title} logo`} />
+                ) : (
+                  logoSrc
+                )}
               </div>
             )}
             <div>
@@ -56,7 +61,7 @@ const ProjectCard: React.FC<Props> = ({
 
       <div className="mask-b-from-55% mask-b-to-95% relative h-fit pl-6 md:pl-24">
         <div className="bg-background overflow-hidden rounded-l-lg">
-          {imageSrc && (
+          {imageSrc && typeof imageSrc === "string" && (
             <img
               src={imageSrc}
               alt={imageAlt ?? title}
@@ -71,4 +76,4 @@ const ProjectCard: React.FC<Props> = ({
   );
 };
 
-export default ProjectCard;
+export default FeatureCard;

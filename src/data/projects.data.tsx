@@ -62,7 +62,6 @@ export const projects = [
       { title: "Tailwind CSS", href: "https://tailwindcss.com" },
     ],
   },
-
   {
     id: "saas-b2b-gestion-commerciale",
     title: "Intsales SaaS Multi-Tenant – Gestion Commerciale B2B",

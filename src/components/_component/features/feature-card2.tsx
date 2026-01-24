@@ -1,5 +1,5 @@
 import React, { type ReactNode, useEffect, useState } from "react";
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 type Logo = {
   src: string;
@@ -9,19 +9,21 @@ type Logo = {
 };
 
 type Props = {
-  text?: string | React.ReactNode;
+   title?: string;
+  description?: string;
   logoSrc?: string | ReactNode;
   imageSrc?: string | string[];
-  /** interval en ms pour le diaporama automatique */
-  imageInterval?: number;
   imageAlt?: string;
+  /** interval en ms pour le diaporama automatique */
   bullets?: string[];
   logos?: Logo[];
   className?: string;
+  imageInterval?: number;
 };
 
-const FeatureCard: React.FC<Props> = ({
-  text,
+const FeatureCard2: React.FC<Props> = ({
+  title,
+  description,
   logoSrc,
   imageSrc,
   imageInterval = 3000,
@@ -46,13 +48,13 @@ const FeatureCard: React.FC<Props> = ({
   }, [images.length, imageInterval]);
   return (
     <Card
-      className={`${className} bg-background  group overflow-hidden shadow-zinc-950/5 sm:col-span-2 sm:rounded-none sm:rounded-tr-xl`}
+      className={`${className} bg-background group overflow-hidden shadow-zinc-950/5 sm:col-span-2 sm:rounded-none sm:rounded-tr-xl`}
     >
       <div className="p-3 text-left ">
-        {text && (
+        {title && (
           <p className=" text-balance text-left text-lg font-semibold sm:text-2xl">
             {logoSrc && (
-              <div className="relative size-8  inline-block  align-baseline">
+              <div className="relative size-8 mr-2 inline-block  align-baseline">
                 {typeof logoSrc === "string" ? (
                   <img
                     src={logoSrc}
@@ -64,7 +66,10 @@ const FeatureCard: React.FC<Props> = ({
                 )}
               </div>
             )}
-            {typeof text === "string" ? text.slice(1) : text}
+            <span>
+
+            {title}
+            </span>
           </p>
         )}
         {/*  */}
@@ -121,4 +126,4 @@ const FeatureCard: React.FC<Props> = ({
   );
 };
 
-export default FeatureCard;
+export default FeatureCard2;
