@@ -1,7 +1,7 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Sparkles, WorkIcon } from "@hugeicons/core-free-icons";
 import { Button } from "./ui/button";
-import { TopSkin } from "./_component/top-skin";
+
 import { BlurFade } from "./ui/blur-fade";
 
 export const Hero = () => {

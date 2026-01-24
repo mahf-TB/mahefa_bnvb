@@ -4,8 +4,6 @@ import { BLUR_FADE_DELAY } from "@/constant";
 import { DATA } from "@/data/data";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  ArrowUpRight,
-  Link,
   Location,
   SquareArrowUpRight,
 } from "@hugeicons/core-free-icons";

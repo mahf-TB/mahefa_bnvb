@@ -15,11 +15,9 @@ type Props = {
 const FeatureCard3: React.FC<Props> = ({
   title,
   description,
-  logoSrc,
   imageSrc,
   imageAlt,
-  bullets = [],
-  className = "",
+
 }) => {
   return (
     <Card className="bg-background group  shadow-zinc-950/5 sm:col-span-2 sm:rounded-none sm:rounded-bl-xl ">

@@ -1,5 +1,7 @@
 
-import ProjectCard from "./_component/projects/Project-card";
+
+
+import ProjectCard from "./_component/projects/project-card";
 import { HeaderSection } from "./header-section";
 import ProjectFeatures from "./project-features";
 

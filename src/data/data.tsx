@@ -1,8 +1,6 @@
-import { Csharp } from "@/components/icons/Csharp";
 import { Docker } from "@/components/icons/Docker";
 import { Elementor } from "@/components/icons/Elementor";
 import { Expressjs } from "@/components/icons/Expressjs";
-import { Golang } from "@/components/icons/Golang";
 import { Java } from "@/components/icons/java";
 import Laravel from "@/components/icons/Laravel";
 import MongoDB from "@/components/icons/MongoDb";

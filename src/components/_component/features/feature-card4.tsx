@@ -23,10 +23,7 @@ const FeatureCard4: React.FC<Props> = ({
   title,
   description,
   subtitle,
-  logoSrc,
-  imageSrc,
-  imageAlt,
-  bullets = [],
+
   className = "",
 }) => {
   return (

@@ -1,11 +1,7 @@
 import React from "react";
-import { Gemini, GooglePaLM, MagicUI, MediaWiki, Replit, VSCodium } from "../logos";
 import { cn } from "@/lib/utils";
 import { LogoIcon } from "../logo";
 import { ReactDark } from "../icons/reactDark";
-import { NextjsIconDark } from "../icons/nextjsIconDark";
-import { Nodejs } from "../icons/nodejs";
-import { Expressjs } from "../icons/Expressjs";
 import Nestjs from "../icons/Nestjs";
 import { Postgresql } from "../icons/postgresql";
 import { Docker } from "../icons/Docker";

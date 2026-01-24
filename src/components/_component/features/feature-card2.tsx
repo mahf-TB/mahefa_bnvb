@@ -23,7 +23,6 @@ type Props = {
 
 const FeatureCard2: React.FC<Props> = ({
   title,
-  description,
   logoSrc,
   imageSrc,
   imageInterval = 3000,
