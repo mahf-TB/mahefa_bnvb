@@ -1,5 +1,5 @@
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Download, Sparkles, WorkIcon } from "@hugeicons/core-free-icons";
+import { Download, Sparkles } from "@hugeicons/core-free-icons";
 import { Button } from "./ui/button";
 
 import { BlurFade } from "./ui/blur-fade";
