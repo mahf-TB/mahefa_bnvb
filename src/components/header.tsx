@@ -5,11 +5,12 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AvatarUser from "./_component/avatar";
+import AutoPopover from "./auto-popover";
 import { GitHubIcons } from "./icons/GitHubIcons";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { MailIcon } from "./icons/MailIcon";
 import Section from "./section";
-
+import { DATA } from "@/data/data";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,23 +32,41 @@ export const Header = () => {
       )}
     >
       <Section className="flex items-center mx-auto">
-        <Link to={location.pathname !== "/about" ? "/about" : "/"} className="flex items-center gap-2">
-          <h1 className="text-lg  text-white flex items-center gap-2">
-            <AvatarUser alt="User Avatar" src="/images/me.jpg"  fallback="MB" className="size-10" />
-            <div className="text-left ml-2 max-sm:hidden" >
+        <div className="text-lg  text-white flex items-center gap-2">
+          <AutoPopover
+            title={"Bonjour !"}
+            description={DATA.shortDescription}
+            className="max-w-125"
+          >
+            <AvatarUser
+              alt="User Avatar"
+              src="/images/me.jpg"
+              fallback="MB"
+              className="size-10"
+            />
+          </AutoPopover>
+          <Link
+            to={location.pathname !== "/about" ? "/about" : "/"}
+            className="flex items-center gap-2"
+          >
+            <div className="text-left ml-2 max-sm:hidden">
               <span className="font-PoppinsBlack">Mahefa Bienvenu</span>
-              <p className="text-xs text-b">🚀 Software Engineer | Building APIs & Scalable SaaS Projects ✅ 💻</p>
+              <p className="text-xs text-b">
+                🚀 Software Engineer | Building APIs & Scalable SaaS Projects ✅
+                💻
+              </p>
             </div>
-          </h1>
-        </Link>
+          </Link>
+        </div>
         <div className="flex-1"></div>
-        
-
         <ul className="flex items-center gap-2">
           <a
             href="https://github.com/mahf-TB"
             target="_blank"
-            className={cn(buttonVariants({ variant: "outline" , size:"lg" }), "size-10 p-0 ")}
+            className={cn(
+              buttonVariants({ variant: "outline", size: "lg" }),
+              "size-10 p-0 ",
+            )}
           >
             <GitHubIcons
               size={18}
@@ -58,7 +77,10 @@ export const Header = () => {
           <a
             href="https://www.linkedin.com/in/mahefa-bienvenu-575188287/"
             target="_blank"
-            className={cn(buttonVariants({ variant: "outline" }), "size-10 p-0")}
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "size-10 p-0",
+            )}
           >
             <LinkedinIcon
               size={18}
@@ -68,7 +90,10 @@ export const Header = () => {
           <a
             href="mailto:mahefatsilavirintsoa@gmail.com"
             target="_blank"
-            className={cn(buttonVariants({ variant: "outline" }), "size-10 p-0")}
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "size-10 p-0",
+            )}
           >
             <MailIcon
               size={18}
@@ -79,7 +104,10 @@ export const Header = () => {
             href="/pdf/CV-ANDRIMAHEFA-Fullstack.pdf"
             download
             aria-label="Télécharger CV-ANDRIMAHEFA-Fullstack"
-            className={cn(buttonVariants({ variant: "outline" }), "size-10 p-0")}
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "size-10 p-0",
+            )}
           >
             <HugeiconsIcon icon={DownloadIcon} strokeWidth={2} />
           </a>

@@ -26,6 +26,7 @@ import { ReactQuery } from "@/components/icons/ReactQuery";
 import { Redis } from "@/components/icons/Redis";
 
 export const DATA = {
+  shortName:"Mahefa Bnvb",
   name: "ANDRIMAHEFA Tsilavirintsoa Bienvenu",
   role: "🚀 Software Engineer | Building APIs & Scalable SaaS Projects ✅  💻",
   location: "Madagascar",

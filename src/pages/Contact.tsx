@@ -3,6 +3,7 @@ import { GitHubIcons } from "../components/icons/GitHubIcons";
 import { LinkedinIcon } from "../components/icons/LinkedinIcon";
 import { MailIcon } from "../components/icons/MailIcon";
 import Section from "../components/section";
+import PopoverTour from "@/components/PopoverTour-comp-389";
 
 export default function Contact() {
   return (
@@ -62,6 +63,7 @@ export default function Contact() {
             </p>
           </a>
         </div>
+        <PopoverTour />
       </Section>
       <Logo />
       <div className="h-10" />
