@@ -23,6 +23,7 @@ import { WordPress } from "@/components/icons/Wordpress";
 import { Zustand } from "@/components/icons/Zustand";
 import { ReactQuery } from "@/components/icons/ReactQuery";
 import { Redis } from "@/components/icons/Redis";
+import { GitHubIcons } from "@/components/icons/GitHubIcons";
 
 export const DATA = {
   shortName:"Mahefa Bnvb",
@@ -45,9 +46,10 @@ export const DATA = {
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
     { name: "Typescript", icon: Typescript },
-    { name: "Shadcn/ui", icon: Shadcn },
     { name: "Node.js", icon: Nodejs },
     { name: "Nest.js", icon: Nestjs },
+    { name: "Shadcn/ui", icon: Shadcn },
+    { name: "GitHub", icon: GitHubIcons },
     { name: "Python", icon: Python },
     { name: "TailwindCss", icon: Tailwindcss },
     { name: "Postgres", icon: Postgresql },

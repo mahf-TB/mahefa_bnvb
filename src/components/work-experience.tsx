@@ -11,8 +11,8 @@ const WorkExperience = () => {
     <div className="flex min-h-0 flex-col gap-y-8 w-full">
       <div className="flex flex-col gap-y-4 items-center justify-center">
         <HeaderSection
-          title=" Mon parcours professionnel"
-          description="Des expériences variées qui m’ont permis de perfectionner mes compétences en développement et gestion de projets."
+          title="Expériences professionnelles"
+          description="Parcours professionnel à travers des missions en stage, freelance et en environnement institutionnel, avec un focus sur le développement d’applications, gestion de projets et la création de solutions à impact. "
           // slug="Experience"
         />
         <Timeline>

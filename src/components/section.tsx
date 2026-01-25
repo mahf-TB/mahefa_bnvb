@@ -2,13 +2,14 @@ import React from "react";
 
 const Section = ({
   className = "",
-  children,
+  children,id
 }: {
   className?: string;
   children?: React.ReactNode;
+  id?: string;
 }) => {
   return (
-    <div className={`relative z-50  max-w-4xl px-4 ${className}`}>
+    <div id={id} className={`relative z-50  max-w-4xl px-4 ${className}`}>
       {children}
     </div>
   );

@@ -40,7 +40,7 @@ function PopoverContent({
       >
         {props.children}
         {showArrow && (
-          <PopoverPrimitive.Arrow className="-my-px fill-popover drop-shadow-[0_1px_0_var(--border)]" />
+          <PopoverPrimitive.Arrow className="-my-px fill-primary drop-shadow-[0_1px_0_var(--border)]" />
         )}
       </PopoverPrimitive.Content>
     </PopoverPrimitive.Portal>

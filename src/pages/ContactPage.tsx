@@ -3,9 +3,10 @@ import { GitHubIcons } from "../components/icons/GitHubIcons";
 import { LinkedinIcon } from "../components/icons/LinkedinIcon";
 import { MailIcon } from "../components/icons/MailIcon";
 import Section from "../components/section";
-import PopoverTour from "@/components/PopoverTour-comp-389";
 
 export default function Contact() {
+ 
+
   return (
     <>
       <Section className="pt-20 min-h-[70vh]">
@@ -15,7 +16,6 @@ export default function Contact() {
             N'hésitez pas à me contacter pour discuter de vos projets
           </p>
         </div>
-
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-4xl">
           {/* Email */}
           <a
@@ -63,7 +63,6 @@ export default function Contact() {
             </p>
           </a>
         </div>
-        <PopoverTour />
       </Section>
       <Logo />
       <div className="h-10" />
