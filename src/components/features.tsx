@@ -17,7 +17,7 @@ const Features = () => {
   return (
     <div className="flex min-h-0 flex-col gap-y-8 w-full">
       <div className="flex flex-col gap-y-4 items-start justify-center">
-        <HeaderSection slug="🚀 Projets & Expertises Clés" />
+        <HeaderSection slug="🚀 Projects & Key Skills" />
         <BlurFade>
           <div className="mx-auto grid gap-2 sm:grid-cols-5">
             <FeatureCard

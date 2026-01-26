@@ -5,14 +5,18 @@ import { HeaderSection } from "./_components/header-section";
 import { Badge } from "./ui/badge";
 import { Timeline, TimelineConnectItem, TimelineItem } from "./ui/timeline";
 
-
 const WorkExperience = () => {
   return (
     <div className="flex min-h-0 flex-col gap-y-8 w-full">
       <div className="flex flex-col gap-y-4 items-center justify-center">
-        <HeaderSection
+        {/* <HeaderSection
           title="Expériences professionnelles"
           description="Parcours professionnel à travers des missions en stage, freelance et en environnement institutionnel, avec un focus sur le développement d’applications, gestion de projets et la création de solutions à impact. "
+          // slug="Experience"
+        /> */}
+        <HeaderSection
+          title="Professional Experience"
+          description="A professional journey through internships, freelance projects, and institutional environments, focusing on application development, project management, and creating impactful solutions."
           // slug="Experience"
         />
         <Timeline>

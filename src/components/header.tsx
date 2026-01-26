@@ -33,32 +33,26 @@ export const Header = () => {
       )}
     >
       <Section className="flex items-center mx-auto">
-        <div className="text-lg  text-white flex items-center gap-2">
-          <AutoPopover
-            title={"Bonjour !"}
-            description={DATA.shortDescription}
-            className="max-w-125"
-          >
-            <AvatarUser
-              alt="User Avatar"
-              src="/images/me.jpg"
-              fallback="MB"
-              className="size-10"
-            />
-          </AutoPopover>
-          <Link
-            to={location.pathname !== "/about" ? "/about" : "/"}
-            className="flex items-center gap-2"
-          >
+        <Link to={"/"} className="flex items-center gap-2">
+          <div className="text-lg  text-white flex items-center gap-2">
+            <AutoPopover
+              title={"Hello! I’m " + DATA.name}
+              description={DATA.shortDescription}
+              className="w-100"
+            >
+              <AvatarUser
+                alt="User Avatar"
+                src="/images/me.jpg"
+                fallback="MB"
+                className="size-10"
+              />
+            </AutoPopover>
             <div className="text-left ml-2 max-sm:hidden">
-              <span className="font-PoppinsBlack">Mahefa Bienvenu</span>
-              <p className="text-xs text-b">
-                🚀 Software Engineer | Building APIs & Scalable SaaS Projects ✅
-                💻
-              </p>
+              <span className="font-PoppinsBlack">{DATA.shortName}</span>
+              <p className="text-xs text-b">{DATA.role}</p>
             </div>
-          </Link>
-        </div>
+          </div>
+        </Link>
         <div className="flex-1"></div>
         <ul className="flex items-center gap-2">
           <a

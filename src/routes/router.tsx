@@ -21,22 +21,22 @@ export const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "experience",
-        element: <Experience />,
-      },
+      // {
+      //   path: "about",
+      //   element: <About />,
+      // },
+      // {
+      //   path: "experience",
+      //   element: <Experience />,
+      // },
       {
         path: "projects",
         element: <ProjectsPage />,
       },
-      {
-        path: "contact",
-        element: <ContactPage />,
-      },
+      // {
+      //   path: "contact",
+      //   element: <ContactPage />,
+      // },
       {
         path: "*",
         element: <NotFound />,

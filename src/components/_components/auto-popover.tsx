@@ -27,13 +27,13 @@ const AutoPopover: React.FC<Props> = ({
   }, []);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 ">
       <Popover open={open}>
         <PopoverTrigger asChild>
           <button className="bg-none hover:bg-none focus:outline-0">{children}</button>
         </PopoverTrigger>
         <PopoverContent
-          className={cn("bg-background max-w-70 py-3 shadow-none", className)}
+          className={cn("bg-background min-w-70 py-3 shadow-none", className)}
           showArrow={true}
           side={"bottom"}
         >

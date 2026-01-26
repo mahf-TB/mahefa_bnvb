@@ -1,5 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Copy, Mail, SendToMobileIcon, WhatsappIcon } from "@hugeicons/core-free-icons";
+import {
+  Copy,
+  Mail,
+  SendToMobileIcon,
+  WhatsappIcon,
+} from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import emailjs from "emailjs-com";
 import { useState } from "react";
@@ -39,13 +44,22 @@ export default function Contact() {
     <section className="pt-16 ">
       <div className="mx-auto max-w-5xl">
         <div className="text-center">
-          <h2 className="text-balance text-2xl font-semibold lg:text-4xl tracking-tighter ">
+          {/* <h2 className="text-balance text-2xl font-semibold lg:text-4xl tracking-tighter ">
             Discutons de votre projet
           </h2>
 
           <p className="mt-4 text-muted-foreground">
             Contactez-moi sur WhatsApp pour un échange rapide, ou envoyez-moi un
             email si vous préférez détailler votre besoin.
+          </p> */}
+
+          <h2 className="text-balance text-2xl font-semibold lg:text-4xl tracking-tighter">
+            Let’s Talk About Your Project
+          </h2>
+
+          <p className="mt-4 text-muted-foreground">
+            Chat with me quickly on WhatsApp, or send me an email to share all
+            the details of your project.
           </p>
 
           <div className="mt-10 flex  items-center justify-center gap-4 flex-row">
@@ -59,7 +73,7 @@ export default function Contact() {
             >
               <HugeiconsIcon icon={WhatsappIcon} className="size-5" />
               <Shimmer as={"span"} className="max-sm:text-xs text-white/80">
-                Me contacter sur WhatsApp
+                Contact me on WhatsApp
               </Shimmer>
             </a>
 
@@ -69,20 +83,20 @@ export default function Contact() {
               className="inline-flex items-center gap-2 rounded-xl border px-3 py-2  font-medium hover:bg-muted transition"
             >
               <HugeiconsIcon icon={Copy} className="size-5" />
-              <span className="hidden md:block">Copier le numéro</span>
+              <span className="hidden md:block">Copy Number</span>
             </button>
           </div>
 
-          {/* Séparateur */}
+          {/* SSeparator */}
           <div className="my-10 flex items-center gap-4">
             <div className="h-px flex-1 bg-border" />
             <span className="text-xs text-muted-foreground">
-              ou envoyer un email
+              or send an email
             </span>
             <div className="h-px flex-1 bg-border" />
           </div>
 
-          {/* Formulaire email */}
+          {/* Email form */}
           <form
             onSubmit={sendEmail}
             className="mx-auto max-w-md space-y-4 text-left"
@@ -100,9 +114,9 @@ export default function Contact() {
               type="email"
               name="email"
               icon={Mail}
-              label="Adresse email"
+              label="Email Address"
               required
-              placeholder="Votre adresse email"
+              placeholder="Your email address"
               className="h-12 w-full rounded-xl bg-background px-4 focus:outline-none focus:ring-2 focus:ring-muted"
             />
 
@@ -111,7 +125,7 @@ export default function Contact() {
               name="message"
               required
               rows={4}
-              placeholder="Décrivez brièvement votre projet ou votre besoin..."
+              placeholder="Briefly describe your project or need..."
               className="w-full rounded-xl  bg-background  focus:outline-none focus:ring-2 focus:ring-muted"
             />
 
@@ -120,7 +134,7 @@ export default function Contact() {
               className="w-full rounded-xl bg-primary px-6 py-3 text-white font-medium hover:opacity-90 transition"
               disabled={loading}
             >
-              {loading ? "Envoi en cours..." : "Envoyer le message"}
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>

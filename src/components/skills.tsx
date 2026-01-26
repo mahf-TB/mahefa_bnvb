@@ -6,11 +6,15 @@ const Skills = () => {
   return (
     <div className="flex min-h-0 flex-col gap-y-8 w-full">
       <div className="flex flex-col gap-y-4 items-start justify-center">
-        <HeaderSection
+        {/* <HeaderSection
           title={" Ce que je sais faire"} //|| "Compétences Techniques"
           description="Un solide ensemble de compétences techniques pour développer tout
             type d’application."
-        />
+        /> */}
+        <HeaderSection
+  title="What I Can Do" // ou "Technical Skills"
+  description="A solid set of technical skills to build any type of application."
+/>
         <div className="flex flex-wrap gap-2">
           {DATA.skills.map((skill, id) => (
             <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>

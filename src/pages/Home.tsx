@@ -26,12 +26,16 @@ export default function Home() {
       <Section>
         <Features />
         <div className="h-20" />
-        <HeaderSection
-          title={"Découvrez mes réalisations et projets récents"} //|| "Compétences Techniques"
+        {/* <HeaderSection
+          title={"Mes projets marquants"} //|| "Compétences Techniques"
           description="  Des applications concrètes qui allient performance et expérience
                     utilisateur. De la gestion de stock à des applications financières
                     et assistants vocaux, chaque projet reflète ma capacité à résoudre
                     des problèmes complexes avec du code propre et efficace."
+        /> */}
+        <HeaderSection
+          title={"My Work & Notable Projects"}
+          description="Real-world applications combining performance, security, and user experience. From inventory management to financial platforms and voice assistants, each project showcases my ability to build efficient and maintainable solutions."
         />
         {/* <ProjectDetails /> */}
         <ProjectChangelog projects={PROJECTS.slice(0, 3)} />
@@ -42,7 +46,7 @@ export default function Home() {
             className="rounded-full sm:px-10 px-3 py-5 hover:bg-primary/80"
           >
             <HugeiconsIcon icon={Work} strokeWidth={2} />
-            <span className="sm:mx-4 mx-2"> Voir tout mes projets</span>
+            <span className="sm:mx-4 mx-2"> See All Projects</span>
             <HugeiconsIcon icon={ArrowRight02Icon} strokeWidth={2} />
           </Button>
         </div>

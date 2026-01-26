@@ -16,7 +16,7 @@ export const HeaderSection = ({
           <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
           <div className="border border-muted-foreground bg-primary z-10 rounded-xl px-4 py-1">
             <span className="text-background text-sm font-medium">
-            <Shimmer>
+            <Shimmer className="">
               {slug}
               </Shimmer>  
               </span>

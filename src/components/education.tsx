@@ -12,11 +12,15 @@ const Education = () => {
   return (
     <div className="flex min-h-0 flex-col gap-y-8 w-full">
       <div className="flex flex-col gap-y-4 items-start justify-center">
-        <HeaderSection
+        {/* <HeaderSection
           title="Mon parcours académique"
           description="Formation solide et continue pour rester à la pointe du
             développement."
-        />
+        /> */}
+        <HeaderSection
+  title="My Academic Journey"
+  description="A solid and continuous education to stay at the forefront of development."
+/>
         <div className="flex flex-col gap-8 w-full">
           {DATA.education.map((education, index) => (
             <BlurFade
