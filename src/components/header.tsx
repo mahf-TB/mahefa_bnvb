@@ -15,7 +15,7 @@ import AutoPopover from "./_components/auto-popover";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+  // const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
