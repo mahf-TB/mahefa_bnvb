@@ -1,12 +1,12 @@
-import { HeaderSection } from "./header-section";
-import { BlurFade } from "./ui/blur-fade";
 import { BLUR_FADE_DELAY } from "@/constant";
 import { DATA } from "@/data/data";
-import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Location,
   SquareArrowUpRight,
 } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { HeaderSection } from "./_components/header-section";
+import { BlurFade } from "./ui/blur-fade";
 
 const Education = () => {
   return (

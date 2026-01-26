@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { SendToMobileIcon, WhatsappIcon } from "@hugeicons/core-free-icons";
+import { Copy, Mail, SendToMobileIcon, WhatsappIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import TextareaForm from "./_component/textarea-form";
-import InputForm from "./_component/input-form";
-import { Shimmer } from "./ai-elements/shimmer";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import InputForm from "./_components/input-form";
+import TextareaForm from "./_components/textarea-form";
+import { Shimmer } from "./ai-elements/shimmer";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -58,7 +58,7 @@ export default function Contact() {
               className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-2 text-white shadow hover:bg-green-700 transition"
             >
               <HugeiconsIcon icon={WhatsappIcon} className="size-5" />
-              <Shimmer as={"div"} className="text-white/80">
+              <Shimmer as={"span"} className="max-sm:text-xs text-white/80">
                 Me contacter sur WhatsApp
               </Shimmer>
             </a>
@@ -66,10 +66,9 @@ export default function Contact() {
             {/* Bouton Copier le numéro */}
             <button
               onClick={() => navigator.clipboard.writeText("+261331718939")}
-              className="inline-flex items-center gap-2 rounded-xl border px-6 py-2  font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 rounded-xl border px-3 py-2  font-medium hover:bg-muted transition"
             >
-              <HugeiconsIcon icon={SendToMobileIcon} className="size-5" />
-
+              <HugeiconsIcon icon={Copy} className="size-5" />
               <span className="hidden md:block">Copier le numéro</span>
             </button>
           </div>
@@ -100,6 +99,7 @@ export default function Contact() {
             <InputForm
               type="email"
               name="email"
+              icon={Mail}
               label="Adresse email"
               required
               placeholder="Votre adresse email"

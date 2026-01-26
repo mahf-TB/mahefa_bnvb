@@ -1,6 +1,6 @@
 import { DATA } from "@/data/data";
+import { HeaderSection } from "./_components/header-section";
 import { BlurFade } from "./ui/blur-fade";
-import { HeaderSection } from "./header-section";
 const BLUR_FADE_DELAY = 0.04;
 const Skills = () => {
   return (

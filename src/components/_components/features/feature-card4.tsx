@@ -7,9 +7,7 @@ import { Card, CardContent, CardHeader } from "../../ui/card";
 import { Figma } from "@/components/icons/Figma";
 import { Shadcn } from "@/components/icons/shadcn";
 import { Python } from "@/components/icons/python";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {  ArrowRight02Icon, Work } from "@hugeicons/core-free-icons";
-import { Button } from "@/components/ui/button";
+
 
 type Props = {
   title?: string;
@@ -62,16 +60,6 @@ const FeatureCard4: React.FC<Props> = ({
           <div className="rounded-(--radius) bg-muted/50 flex aspect-square items-center justify-center border p-4">
             <Postgresql className="size-8" />
           </div>
-        </div>
-        <div className="sm:text-left align-bottom text-right sm:mt-auto -mt-16">
-          <Button
-            size={"lg"}
-            className="rounded-full sm:px-10 px-3 py-5 hover:bg-primary/80"
-          >
-            <HugeiconsIcon icon={Work} strokeWidth={2} />
-            <span className="sm:mx-4 mx-2"> Voir mes projets</span>
-            <HugeiconsIcon icon={ArrowRight02Icon}  strokeWidth={2} />
-          </Button>
         </div>
       </CardContent>
     </Card>

@@ -17,7 +17,7 @@ export function SectionWrapper({
     <section id={id} className={`relative ${className}`}>
       <div className="bg-primary absolute  bottom-0 top-0 left-0 right-0 z-1  opacity-50 mix-blend-color" />
       <img
-        src="./images/bg-login.jpg"
+        src="/images/bg-login.jpg"
         alt=" on Unsplash"
         title="on Unsplash"
         className="h-full absolute inset-0 rounded-none aspect-video w-full object-cover brightness-60 grayscale"

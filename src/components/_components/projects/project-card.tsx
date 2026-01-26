@@ -1,7 +1,7 @@
-import { Zap } from "@hugeicons/core-free-icons";
+import { ZapIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
-export default function ProjectDetails() {
+export default function ProjectCard() {
   return (
     <section className="py-16 md:py-32">
       <div className="mx-auto max-w-5xl space-y-12 px-6">
@@ -15,25 +15,11 @@ export default function ProjectDetails() {
           </p>
         </div>
         <div className="px-3 pt-3 md:-mx-8">
-          <div className="aspect-88/36 mask-b-from-75% mask-b-to-95% relative">
+          <div className="aspect-88/46 mask-b-from-75% mask-b-to-95% relative">
             <img
-              src="/mail-upper.png"
+              src="/images/ecommerce-login.png"
               className="absolute inset-0 z-10"
               alt="payments illustration dark"
-              width={2797}
-              height={1137}
-            />
-            <img
-              src="/mail-back.png"
-              className="hidden dark:block"
-              alt="payments illustration dark"
-              width={2797}
-              height={1137}
-            />
-            <img
-              src="/mail-back-light.png"
-              className="dark:hidden"
-              alt="payments illustration light"
               width={2797}
               height={1137}
             />
@@ -42,8 +28,7 @@ export default function ProjectDetails() {
         <div className="relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4">
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <HugeiconsIcon icon={Zap} strokeWidth={2} />
-
+              <HugeiconsIcon icon={ZapIcon} strokeWidth={2} />
               <h3 className="text-sm font-medium">Faaast</h3>
             </div>
             <p className="text-muted-foreground text-sm">
@@ -52,7 +37,7 @@ export default function ProjectDetails() {
           </div>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <HugeiconsIcon icon={Zap} strokeWidth={2} />
+              <HugeiconsIcon icon={ZapIcon} strokeWidth={2} />
               <h3 className="text-sm font-medium">Powerful</h3>
             </div>
             <p className="text-muted-foreground text-sm">
@@ -61,7 +46,7 @@ export default function ProjectDetails() {
           </div>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <HugeiconsIcon icon={Zap} strokeWidth={2} />
+              <HugeiconsIcon icon={ZapIcon} strokeWidth={2} />
               <h3 className="text-sm font-medium">Security</h3>
             </div>
             <p className="text-muted-foreground text-sm">
@@ -70,8 +55,7 @@ export default function ProjectDetails() {
           </div>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <HugeiconsIcon icon={Zap} strokeWidth={2} />
-
+              <HugeiconsIcon icon={ZapIcon} strokeWidth={2} />
               <h3 className="text-sm font-medium">AI Powered</h3>
             </div>
             <p className="text-muted-foreground text-sm">

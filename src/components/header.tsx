@@ -1,16 +1,17 @@
 import { buttonVariants } from "@/components/ui/button";
+import { DATA } from "@/data/data";
 import { cn } from "@/lib/utils";
 import { DownloadIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import AvatarUser from "./_component/avatar";
-import AutoPopover from "./auto-popover";
+import AvatarUser from "./_components/avatar";
+
 import { GitHubIcons } from "./icons/GitHubIcons";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { MailIcon } from "./icons/MailIcon";
 import Section from "./section";
-import { DATA } from "@/data/data";
+import AutoPopover from "./_components/auto-popover";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);

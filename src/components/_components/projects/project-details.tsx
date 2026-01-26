@@ -5,7 +5,7 @@ import { HugeiconsIcon, type IconSvgElement } from "@hugeicons/react";
 
 import { type ReactNode } from "react";
 
-export default function ProjectFeatures() {
+export default function ProjectDetails() {
   return (
     <section className="bg-zinc-50 py-16 md:py-18 dark:bg-transparent">
       {/* <div className="mx-auto max-w-2xl  lg:max-w-5xl"> */}

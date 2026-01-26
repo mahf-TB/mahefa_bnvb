@@ -1,9 +1,7 @@
+import { PROJECTS } from "@/data/projects.data";
+import { HeaderSection } from "./_components/header-section";
+import ProjectChangelog from "./_components/projects/project-changlog";
 
-
-
-import ProjectCard from "./_component/projects/project-card";
-import { HeaderSection } from "./header-section";
-import ProjectFeatures from "./project-features";
 
 const Projects = () => {
   return (
@@ -15,10 +13,10 @@ const Projects = () => {
             utilisateur. De la gestion de stock à des applications financières
             et assistants vocaux, chaque projet reflète ma capacité à résoudre
             des problèmes complexes avec du code propre et efficace."
-            slug="Mes Projets"
+            slug="Projets réalisés"
         />
-       <ProjectFeatures />
-       <ProjectCard />
+       {/* <ProjectDetails /> */}
+       <ProjectChangelog projects={PROJECTS} />
       </div>
     </div>
   );

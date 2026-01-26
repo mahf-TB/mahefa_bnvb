@@ -1,3 +1,5 @@
+import { Shimmer } from "../ai-elements/shimmer";
+
 export const HeaderSection = ({
   title,
   description,
@@ -13,7 +15,11 @@ export const HeaderSection = ({
         <div className="flex items-center w-full">
           <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
           <div className="border border-muted-foreground bg-primary z-10 rounded-xl px-4 py-1">
-            <span className="text-background text-sm font-medium">{slug}</span>
+            <span className="text-background text-sm font-medium">
+            <Shimmer>
+              {slug}
+              </Shimmer>  
+              </span>
           </div>
           <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
         </div>

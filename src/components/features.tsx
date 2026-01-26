@@ -1,10 +1,10 @@
 import { FEATURED } from "@/data/features.data";
-import FeatureCard3 from "./_component/features/feature-card3";
-import FeatureCard4 from "./_component/features/feature-card4";
-import { HeaderSection } from "./header-section";
+import FeatureCard from "./_components/features/feature-card1";
+import FeatureCard2 from "./_components/features/feature-card2";
+import FeatureCard3 from "./_components/features/feature-card3";
+import FeatureCard4 from "./_components/features/feature-card4";
+import { HeaderSection } from "./_components/header-section";
 import { BlurFade } from "./ui/blur-fade";
-import FeatureCard from "./_component/features/feature-card1";
-import FeatureCard2 from "./_component/features/feature-card2";
 
 
 const Features = () => {

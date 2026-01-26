@@ -1,7 +1,7 @@
 import { DATA } from "@/data/data";
 import { cn } from "@/lib/utils";
-import AvatarUser from "./_component/avatar";
-import { HeaderSection } from "./header-section";
+import AvatarUser from "./_components/avatar";
+import { HeaderSection } from "./_components/header-section";
 import { Badge } from "./ui/badge";
 import { Timeline, TimelineConnectItem, TimelineItem } from "./ui/timeline";
 
