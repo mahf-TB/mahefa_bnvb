@@ -1,6 +1,5 @@
-
-import Projects from "@/components/projects";
-import Section from "@/components/section";
+import Projects from "../components/projects";
+import Section from "../components/section";
 
 export default function ProjectsPage() {
   return (
