@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { DownloadIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AvatarUser from "./_components/avatar";
 
 import { GitHubIcons } from "./icons/GitHubIcons";
