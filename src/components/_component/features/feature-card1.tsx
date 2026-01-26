@@ -65,7 +65,7 @@ const FeatureCard: React.FC<Props> = ({
             <img
               src={imageSrc}
               alt={imageAlt ?? title}
-              className=" h-[300]"
+              className="object-cover h-75"
               width={1207}
               height={929}
             />
