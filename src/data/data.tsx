@@ -252,6 +252,7 @@ export const DATA = {
   name: "ANDRIMAHEFA Bienvenu",
   role: "🚀 Software Engineer | Building APIs & Scalable SaaS Projects",
   location: "Madagascar",
+  cvpdf:"/pdf/Fullstack-CV-ANDRIMAHEFA.pdf",
   shortDescription:
     "Full-Stack developer focused on product, designing reliable, performant, and scalable web and mobile applications.",
   description:

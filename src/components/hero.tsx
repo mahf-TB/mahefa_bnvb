@@ -27,7 +27,7 @@ export const Hero = () => {
           <p className="z-50 mt-6 text-muted-foreground">{DATA.description}</p>
           <div className="z-50 mb-5">
             <div className="mt-10 flex flex-nowrap items-center justify-start gap-4">
-              <a href="/pdf/CV-ANDRIMAHEFA-Fullstack.pdf" download>
+              <a href={DATA.cvpdf} download>
                 <Button
                   size="lg"
                   className="rounded-full sm:px-10 px-3 py-5 hover:bg-primary/80"

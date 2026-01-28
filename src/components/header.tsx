@@ -96,7 +96,7 @@ export const Header = () => {
             ></MailIcon>
           </a>
           <a
-            href="/pdf/CV-ANDRIMAHEFA-Fullstack.pdf"
+            href={DATA.cvpdf}
             download
             aria-label="Télécharger CV-ANDRIMAHEFA-Fullstack"
             className={cn(
