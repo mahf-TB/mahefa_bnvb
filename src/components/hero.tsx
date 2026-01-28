@@ -9,12 +9,14 @@ export const Hero = () => {
     <div className="flex items-center justify-center  h-full">
       <div className="relative z-10 mx-auto max-w-4xl text-left ">
         <div className="h-55" />
-        <div className="z-50 inline-flex items-center gap-2 px-4 py-2 mr-auto rounded-full bg-white/10 backdrop-blur-sm text-white mb-6">
-          <HugeiconsIcon icon={Sparkles} strokeWidth={2} />
-          <span className="sm:text-sm text-xs font-normal sm:font-medium whitespace-nowrap">
-            Turn your ideas into digital solutions
-          </span>
-        </div>
+        <BlurFade>
+          <div className="z-50 inline-flex items-center gap-2 px-4 py-2 mr-auto rounded-full bg-white/10 backdrop-blur-sm text-white mb-6">
+            <HugeiconsIcon icon={Sparkles} strokeWidth={2} />
+            <span className="sm:text-sm text-xs font-normal sm:font-medium whitespace-nowrap">
+              Turn your ideas into digital solutions
+            </span>
+          </div>
+        </BlurFade>
         <BlurFade>
           <h1 className="z-50 text-3xl font-extrabold tracking-tight text-white sm:text-6xl">
             Build Modern &<br />

@@ -1,7 +1,8 @@
 import { PROJECTS } from "@/data/projects.data";
 import { HeaderSection } from "./_components/header-section";
 import ProjectChangelog from "./_components/projects/project-changlog";
-
+import { BlurFade } from "./ui/blur-fade";
+import { BLUR_FADE_DELAY } from "@/constant";
 
 const Projects = () => {
   return (
@@ -15,12 +16,16 @@ const Projects = () => {
             des problèmes complexes avec du code propre et efficace."
             slug="Projets réalisés"
         /> */}
-        <HeaderSection
-          title={"My Work & Notable Projects"}
-          description="Real-world applications combining performance, security, and user experience. From inventory management to financial platforms and voice assistants, each project showcases my ability to build efficient and maintainable solutions."
-        />
-       {/* <ProjectDetails /> */}
-       <ProjectChangelog projects={PROJECTS} />
+        <BlurFade delay={BLUR_FADE_DELAY }>
+          <HeaderSection
+            title={"My Work & Notable Projects"}
+            description="Real-world applications combining performance, security, and user experience. From inventory management to financial platforms and voice assistants, each project showcases my ability to build efficient and maintainable solutions."
+          />
+        </BlurFade>
+        {/* <ProjectDetails /> */}
+        <BlurFade delay={BLUR_FADE_DELAY * 10 * 0.05}>
+          <ProjectChangelog projects={PROJECTS} />
+        </BlurFade>
       </div>
     </div>
   );

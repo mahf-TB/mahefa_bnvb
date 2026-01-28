@@ -447,7 +447,7 @@ export const DATA = {
     {
       school: "National School of Computer Science (ENI)",
       href: "https://eni.mg",
-      degree: "Bachelor 3 in Computer Science – Software Engineering & Databases",
+      degree: "Professional bachelor’s degree in Computer Science – Software Engineering & Databases",
       location: "Fianarantsoa, Madagascar",
       logoUrl:
         "https://eni.mg/wp-content/uploads/2023/12/cropped-cropped-ENI_logo-removebg-preview-1-57x57.png",
