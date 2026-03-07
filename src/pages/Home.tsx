@@ -26,13 +26,6 @@ export default function Home() {
       <Section>
         <Features />
         <div className="h-20" />
-        {/* <HeaderSection
-          title={"Mes projets marquants"} //|| "Compétences Techniques"
-          description="  Des applications concrètes qui allient performance et expérience
-                    utilisateur. De la gestion de stock à des applications financières
-                    et assistants vocaux, chaque projet reflète ma capacité à résoudre
-                    des problèmes complexes avec du code propre et efficace."
-        /> */}
         <HeaderSection
           title={"My Work & Notable Projects"}
           description="Real-world applications combining performance, security, and user experience. From inventory management to financial platforms and voice assistants, each project showcases my ability to build efficient and maintainable solutions."

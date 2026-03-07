@@ -38,7 +38,7 @@ const ProjectChangelog = ({ projects }: { projects: any }) => {
                           {changelog.title}
                         </h2>
 
-                        {/* Tags */}
+                        {/* Stack List */}
                         {changelog.stacks && changelog.stacks.length > 0 && (
                           <div className="flex flex-wrap gap-2">
                             {changelog.stacks.map((icon: any, i: number) => (
@@ -54,6 +54,8 @@ const ProjectChangelog = ({ projects }: { projects: any }) => {
                           </div>
                         )}
                       </div>
+
+                      {/* Image des des projets */}
                       {changelog.images && !changelog.isScale ? (
                         <div className="prose dark:prose-invert max-w-none prose-headings:scroll-mt-8 prose-headings:font-semibold prose-a:no-underline prose-headings:tracking-tight prose-headings:text-balance prose-p:tracking-tight prose-p:text-balance">
                           <div className={cn("aspect-88/56 mask-b-from-75% mask-b-to-95% relative", changelog.isMobile && "aspect-88/96 h-125")} >
@@ -83,6 +85,22 @@ const ProjectChangelog = ({ projects }: { projects: any }) => {
                           </div>
                         </div>
                       )}
+                      {/* Reference Git ou Lien */}
+                      {changelog.reference && changelog.reference.length > 0 && (
+                          <div className="flex flex-wrap gap-2">
+                            {changelog.reference.map((icon: any, i: number) => (
+                              <Badge
+                                key={i}
+                                variant={"secondary"}
+                                onClick={() => window.open(icon.href, "_blank")}
+                                className="flex items-center rounded-md gap-1.5 text-xs cursor-pointer "
+                              >
+                                {icon.icon}
+                                {icon.title}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
                       <div className="relative space-y-3 mt-2">
                         {changelog.description && (
                           <p className="text-muted-foreground text-left">

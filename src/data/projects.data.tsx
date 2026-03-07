@@ -27,6 +27,7 @@ import Nuxt from "@/components/icons/Nuxt";
 import { Mysql } from "@/components/icons/Mysql";
 import { OpenAI } from "@/components/icons/OpenAI";
 import Vuejs from "@/components/icons/Vuejs";
+import { GitHubIcons } from "@/components/icons/GitHubIcons";
 
 // export const PROJECTSFR = [
 //   {
@@ -441,6 +442,13 @@ export const PROJECTS = [
         href: "https://ui.shadcn.com",
       },
     ],
+    reference:[
+      {
+        title: "Github",
+        icon: <GitHubIcons className="h-5 w-5" />,
+        href: "https://github.com/mahf-TB/Quincaillerie",
+      },
+    ],
     images: "/images/havana.png",
   },
   {
@@ -489,6 +497,13 @@ export const PROJECTS = [
         href: "https://trello.com",
       },
     ],
+     reference:[
+      {
+        title: "Github",
+        icon: <GitHubIcons className="h-5 w-5" />,
+        href: "https://github.com/mahf-TB/GU-OnirTech",
+      },
+    ],
     images: "/gift/projet-onirtech.gif",
   },
   {
@@ -528,6 +543,13 @@ export const PROJECTS = [
         href: "https://tailwindcss.com",
       },
     ],
+    reference:[
+      {
+        title: "Github",
+        icon: <GitHubIcons className="h-5 w-5" />,
+        href: "https://github.com/mahf-TB/O-GECA",
+      },
+    ],
     images: "/images/ecommerce-login.png",
     isScale: true,
   },
@@ -545,6 +567,7 @@ export const PROJECTS = [
       "Real-time analytical dashboards",
       "High user load support",
     ],
+
     stacks: [
       {
         title: "React",
@@ -570,6 +593,13 @@ export const PROJECTS = [
         title: "Shadcn/UI",
         icon: <Shadcn className="h-5 w-5" />,
         href: "https://ui.shadcn.com",
+      },
+    ],
+     reference:[
+      {
+        title: "Frontend Repos",
+        icon: <GitHubIcons className="h-5 w-5" />,
+        href: "https://github.com/mahf-TB/baba_saas_frontend",
       },
     ],
     images: "/images/login-intsales.png",
@@ -615,6 +645,18 @@ export const PROJECTS = [
         href: "https://tanstack.com/query",
       },
     ],
+     reference:[
+      {
+        title: "Frontend Github",
+        icon: <GitHubIcons className="h-5 w-5" />,
+        href: "https://github.com/mahf-TB/e-commerce ",
+      },
+       {
+        title: "Backend Github",
+        icon: <GitHubIcons className="h-5 w-5" />,
+        href: "https://github.com/mahf-TB/e-commerce-api  ",
+      },
+    ],
     images: "/images/ecommerce.png",
   },
   {
@@ -644,6 +686,13 @@ export const PROJECTS = [
       },
       { title: "MySQL", icon: <Mysql />, href: "https://www.mysql.com" },
       { title: "OpenAI", icon: <OpenAI />, href: "https://openai.com" },
+    ],
+     reference:[
+      {
+        title: "Backend Repos",
+        icon: <GitHubIcons className="h-5 w-5" />,
+        href: "https://github.com/mahf-TB/agriConnect-back ",
+      },
     ],
     images: "/images/agro.png",
     isScale: true,
@@ -679,10 +728,19 @@ export const PROJECTS = [
         href: "https://www.postgresql.org",
       },
     ],
+    //  reference:[
+    //   {
+    //     title: "Github",
+    //     icon: <GitHubIcons className="h-5 w-5" />,
+    //     href: "https://github.com/mahf-TB/GU-OnirTech",
+    //   },
+    // ],
     images: "/images/mobile-2.png",
     isMobile: true,
   },
+ 
   {
+    
     id: "residence-universitaire",
     title: "University Residence Management System",
     subtitle: "Management System",
@@ -708,6 +766,13 @@ export const PROJECTS = [
         title: "Merise",
         icon: <Shadcn />,
         href: "https://fr.wikipedia.org/wiki/Merise",
+      },
+    ],
+     reference:[
+      {
+        title: "Github",
+        icon: <GitHubIcons className="h-5 w-5" />,
+        href: "https://github.com/mahf-TB/Gestion-residence-universitaire ",
       },
     ],
     images: "/gift/lodgeIHM.gif",
