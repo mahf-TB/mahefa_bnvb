@@ -1,6 +1,5 @@
 import { HeaderSection } from "@/components/_components/header-section";
 import { Button } from "@/components/ui/button";
-import { PROJECTS } from "@/data/projects.data";
 import { ArrowRight02Icon, Work } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { lazy, Suspense } from "react";
@@ -9,7 +8,7 @@ import Section from "../components/section";
 
 const Hero = lazy(() => import("@/components/hero").then((module) => ({ default: module.Hero })));
 const Features = lazy(() => import("../components/features"));
-const ProjectChangelog = lazy(() => import("@/components/_components/projects/project-changlog"));
+const HomeProjects = lazy(() => import("@/components/_components/projects/home-projects"));
 const WorkExperience = lazy(() => import("../components/work-experience"));
 const Skills = lazy(() => import("../components/skills"));
 const Education = lazy(() => import("../components/education"));
@@ -40,7 +39,7 @@ export default function Home() {
         />
         {/* <ProjectDetails /> */}
         <Suspense fallback={<SectionFallback />}>
-          <ProjectChangelog projects={PROJECTS.slice(0, 3)} />
+          <HomeProjects />
         </Suspense>
         <div className="mt-10">
           <Button

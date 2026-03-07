@@ -37,7 +37,7 @@ const FeatureCard3: React.FC<Props> = ({
                     ? imageSrc
                     : Array.isArray(imageSrc)
                       ? imageSrc[0]
-                      : "/images/mobile-2.png"
+                      : "/images/mobile-2.webp"
                 }
                 className="rounded-xl sm:h-50 h-60 object-cover object-top"
                 alt={imageAlt ?? "payments illustration dark"}

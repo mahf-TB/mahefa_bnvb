@@ -17,7 +17,7 @@ export default function ProjectCard() {
         <div className="px-3 pt-3 md:-mx-8">
           <div className="aspect-88/46 mask-b-from-75% mask-b-to-95% relative">
             <img
-              src="/images/ecommerce-login.png"
+              src="/images/ecommerce-login.webp"
               className="absolute inset-0 z-10"
               alt="payments illustration dark"
               width={2797}

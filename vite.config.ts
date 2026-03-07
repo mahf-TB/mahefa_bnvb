@@ -12,6 +12,25 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 1000, // en kB, ici 1000 kB
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react": ["react", "react-dom", "react-router-dom"],
+          "vendor-motion": ["motion"],
+          "vendor-ui": [
+            "@radix-ui/react-avatar",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-slot",
+            "@radix-ui/react-tooltip",
+            "@base-ui/react",
+          ],
+          "vendor-icons": [
+            "@hugeicons/core-free-icons",
+            "@hugeicons/react",
+          ],
+        },
+      },
+    },
   },
 })

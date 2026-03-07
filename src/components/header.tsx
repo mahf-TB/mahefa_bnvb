@@ -7,11 +7,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AvatarUser from "./_components/avatar";
 
+import AutoPopover from "./_components/auto-popover";
 import { GitHubIcons } from "./icons/GitHubIcons";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { MailIcon } from "./icons/MailIcon";
 import Section from "./section";
-import AutoPopover from "./_components/auto-popover";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,7 +42,7 @@ export const Header = () => {
             >
               <AvatarUser
                 alt="User Avatar"
-                src="/images/me.jpg"
+                src="/images/me.webp"
                 fallback="MB"
                 className="size-10"
               />
