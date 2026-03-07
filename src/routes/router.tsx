@@ -1,8 +1,11 @@
+import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../pages/Home";
-import NotFound from "../pages/NotFound";
 import RootLayout from "../layouts/RootLayout";
-import ProjectsPage from "@/pages/ProjectsPage";
+const Home = lazy(() => import("../pages/Home"));
+const NotFound = lazy(() => import("../pages/NotFound"));
+const ProjectsPage = lazy(() => import("@/pages/ProjectsPage"));
+
+const routeFallbackElement = <div className="min-h-[40vh] w-full" aria-hidden="true" />;
 // import ContactPage from "@/pages/ContactPage";
 // import Experience from "@/pages/Experience";
 // import About from "@/pages/About";
@@ -12,11 +15,19 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <NotFound />,
+    errorElement: (
+      <Suspense fallback={routeFallbackElement}>
+        <NotFound />
+      </Suspense>
+    ),
     children: [
       {
         index: true,
-        element: <Home />,
+        element: (
+          <Suspense fallback={routeFallbackElement}>
+            <Home />
+          </Suspense>
+        ),
       },
       // {
       //   path: "about",
@@ -28,7 +39,11 @@ export const router = createBrowserRouter([
       // },
       {
         path: "projects",
-        element: <ProjectsPage />,
+        element: (
+          <Suspense fallback={routeFallbackElement}>
+            <ProjectsPage />
+          </Suspense>
+        ),
       },
       // {
       //   path: "contact",
@@ -36,7 +51,11 @@ export const router = createBrowserRouter([
       // },
       {
         path: "*",
-        element: <NotFound />,
+        element: (
+          <Suspense fallback={routeFallbackElement}>
+            <NotFound />
+          </Suspense>
+        ),
       },
     ],
   },

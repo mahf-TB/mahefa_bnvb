@@ -1,17 +1,21 @@
-import Contact from "@/components/contact";
-import Education from "../components/education";
-import Features from "../components/features";
-import { Hero } from "../components/hero";
-import Section from "../components/section";
-import Skills from "../components/skills";
-import WorkExperience from "../components/work-experience";
 import { HeaderSection } from "@/components/_components/header-section";
-import ProjectChangelog from "@/components/_components/projects/project-changlog";
-import { PROJECTS } from "@/data/projects.data";
 import { Button } from "@/components/ui/button";
-import { HugeiconsIcon } from "@hugeicons/react";
+import { PROJECTS } from "@/data/projects.data";
 import { ArrowRight02Icon, Work } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { lazy, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
+import Section from "../components/section";
+
+const Hero = lazy(() => import("@/components/hero").then((module) => ({ default: module.Hero })));
+const Features = lazy(() => import("../components/features"));
+const ProjectChangelog = lazy(() => import("@/components/_components/projects/project-changlog"));
+const WorkExperience = lazy(() => import("../components/work-experience"));
+const Skills = lazy(() => import("../components/skills"));
+const Education = lazy(() => import("../components/education"));
+const Contact = lazy(() => import("@/components/contact"));
+
+const SectionFallback = () => <div className="h-24" aria-hidden="true" />;
 
 export default function Home() {
   const navigate = useNavigate();
@@ -19,19 +23,25 @@ export default function Home() {
     <>
       {/* Hero */}
       <Section className="relative ">
-        <Hero />
+        <Suspense fallback={<SectionFallback />}>
+          <Hero />
+        </Suspense>
       </Section>
 
       <div className="h-20" />
       <Section>
-        <Features />
+        <Suspense fallback={<SectionFallback />}>
+          <Features />
+        </Suspense>
         <div className="h-20" />
         <HeaderSection
           title={"My Work & Notable Projects"}
           description="Real-world applications combining performance, security, and user experience. From inventory management to financial platforms and voice assistants, each project showcases my ability to build efficient and maintainable solutions."
         />
         {/* <ProjectDetails /> */}
-        <ProjectChangelog projects={PROJECTS.slice(0, 3)} />
+        <Suspense fallback={<SectionFallback />}>
+          <ProjectChangelog projects={PROJECTS.slice(0, 3)} />
+        </Suspense>
         <div className="mt-10">
           <Button
             size={"lg"}
@@ -48,24 +58,32 @@ export default function Home() {
       <div className="h-20" />
       {/* Experience */}
       <Section>
-        <WorkExperience />
+        <Suspense fallback={<SectionFallback />}>
+          <WorkExperience />
+        </Suspense>
       </Section>
 
       <div className="h-20" />
       {/* Skill */}
       <Section>
-        <Skills />
+        <Suspense fallback={<SectionFallback />}>
+          <Skills />
+        </Suspense>
       </Section>
 
       <div className="h-20" />
       {/* Education */}
       <Section>
-        <Education />
+        <Suspense fallback={<SectionFallback />}>
+          <Education />
+        </Suspense>
       </Section>
 
       <div className="h-10" />
       <Section id="contact">
-        <Contact />
+        <Suspense fallback={<SectionFallback />}>
+          <Contact />
+        </Suspense>
       </Section>
     </>
   );

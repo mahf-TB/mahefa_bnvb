@@ -1,12 +1,13 @@
 import { BLUR_FADE_DELAY } from "@/constant";
 import { DATA } from "@/data/data";
 import {
-  Location,
-  SquareArrowUpRight,
+    Location,
+    SquareArrowUpRight,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { HeaderSection } from "./_components/header-section";
 import { BlurFade } from "./ui/blur-fade";
+import { OptimizedImage } from "./ui/optimized-image";
 
 const Education = () => {
   return (
@@ -35,10 +36,11 @@ const Education = () => {
               >
                 <div className="flex items-center gap-x-3 flex-1 min-w-0">
                   {education.logoUrl ? (
-                    <img
+                    <OptimizedImage
                       src={education.logoUrl}
                       alt={education.school}
                       className="size-10 md:size-14 bg-white p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
+                      wrapperClassName="size-10 md:size-14 rounded-full"
                     />
                   ) : (
                     <div className="size-10 md:size-14 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />

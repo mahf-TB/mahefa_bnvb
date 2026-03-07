@@ -1,4 +1,5 @@
 import { Card, CardHeader } from "@/components/ui/card";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import React from "react";
 
 type Props = {
@@ -30,10 +31,11 @@ const FeatureCard: React.FC<Props> = ({
             {logoSrc && (
               <div className="relative bg-white flex aspect-square  min-w-12 h-12 overflow-hidden p-2 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
                 {typeof logoSrc === "string" ? (
-                  <img
+                  <OptimizedImage
                     src={logoSrc}
                     className="m-auto object-contain"
                     alt={`${title} logo`}
+                    wrapperClassName="h-full w-full"
                   />
                 ) : (
                   logoSrc
@@ -69,12 +71,13 @@ const FeatureCard: React.FC<Props> = ({
       <div className="mask-b-from-55% mask-b-to-95% relative h-fit pl-6 md:pl-24">
         <div className="bg-background overflow-hidden rounded-l-lg">
           {imageSrc && typeof imageSrc === "string" && (
-            <img
+            <OptimizedImage
               src={imageSrc}
               alt={imageAlt ?? title}
               className="object-cover object-top-left h-75"
               width={1207}
               height={929}
+              wrapperClassName="h-75"
             />
           )}
         </div>

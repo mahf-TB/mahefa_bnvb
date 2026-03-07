@@ -1,5 +1,6 @@
-import React, { type ReactNode, useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { OptimizedImage } from "@/components/ui/optimized-image";
+import React, { type ReactNode, useEffect, useState } from "react";
 
 type Logo = {
   src: string;
@@ -55,10 +56,11 @@ const FeatureCard2: React.FC<Props> = ({
             {logoSrc && (
               <div className="relative size-8 mr-2 inline-block  align-baseline">
                 {typeof logoSrc === "string" ? (
-                  <img
+                  <OptimizedImage
                     src={logoSrc}
                     className="m-auto  object-contain"
                     alt={"logo"}
+                    wrapperClassName="h-full w-full"
                   />
                 ) : (
                   logoSrc
@@ -84,7 +86,7 @@ const FeatureCard2: React.FC<Props> = ({
           <div className="mt-6 grid grid-cols-3 gap-2">
             {logos.map((l, i) => (
               <div key={i} className="flex items-center justify-center p-2">
-                <img
+                <OptimizedImage
                   src={l.src}
                   alt={l.alt ?? "logo"}
                   width={l.width ?? 32}
@@ -102,7 +104,7 @@ const FeatureCard2: React.FC<Props> = ({
             {images.length > 0 && (
               <div className="relative w-full h-full">
                 {images.map((src, i) => (
-                  <img
+                  <OptimizedImage
                     key={i}
                     src={src}
                     alt={imageAlt ?? `illustration ${i + 1}`}
@@ -114,6 +116,7 @@ const FeatureCard2: React.FC<Props> = ({
                         : "opacity-0 pointer-events-none"
                     }`}
                     aria-hidden={i === current ? "false" : "true"}
+                    wrapperClassName="absolute inset-0"
                   />
                 ))}
               </div>

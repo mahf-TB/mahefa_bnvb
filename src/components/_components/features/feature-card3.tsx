@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import React from "react";
 import { Card, CardContent } from "../../ui/card";
 
@@ -30,13 +30,8 @@ const FeatureCard3: React.FC<Props> = ({
             <p className="text-muted-foreground">{description}</p>
           </div>
           <div className="mx-auto max-w-md  mask-[radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)]">
-            <div
-              className={cn(
-                "bg-background h-50 shadow-xl",
-                false && " dark:bg-muted/50 p-1 rounded-xl border ",
-              )}
-            >
-              <img
+            <div className="bg-background h-50 shadow-xl">
+              <OptimizedImage
                 src={
                   typeof imageSrc === "string"
                     ? imageSrc
@@ -44,13 +39,11 @@ const FeatureCard3: React.FC<Props> = ({
                       ? imageSrc[0]
                       : "/images/mobile-2.png"
                 }
-                className={cn(
-                  "rounded-xl sm:h-50 h-60 object-cover object-top ",
-                  false && "object-center  ",
-                )}
+                className="rounded-xl sm:h-50 h-60 object-cover object-top"
                 alt={imageAlt ?? "payments illustration dark"}
                 width={929}
                 height={1207}
+                wrapperClassName="rounded-xl"
               />
             </div>
           </div>

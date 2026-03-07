@@ -1,13 +1,41 @@
 import { Badge } from "@/components/ui/badge";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { cn } from "@/lib/utils";
+import { type ReactNode } from "react";
 
-const ProjectChangelog = ({ projects }: { projects: any }) => {
+type StackItem = {
+  title: string;
+  icon: ReactNode;
+  href?: string;
+};
+
+type ReferenceItem = {
+  title: string;
+  icon: ReactNode;
+  href: string;
+};
+
+type ProjectItem = {
+  id: string;
+  title: string;
+  subtitle?: string;
+  logo?: ReactNode;
+  stacks?: StackItem[];
+  images?: string;
+  isScale?: boolean;
+  isMobile?: boolean;
+  reference?: ReferenceItem[];
+  description?: string;
+  list?: string[];
+};
+
+const ProjectChangelog = ({ projects }: { projects: ProjectItem[] }) => {
   return (
     <div>
       {/* Timeline */}
       <div className="max-w-5xl mx-auto px-6 lg:px-10 pt-10">
         <div className="relative">
-          {projects.slice().map((changelog: any) => {
+          {projects.slice().map((changelog) => {
             return (
               <div key={changelog.id} className="relative">
                 <div className="flex flex-col md:flex-row gap-y-6">
@@ -41,7 +69,7 @@ const ProjectChangelog = ({ projects }: { projects: any }) => {
                         {/* Stack List */}
                         {changelog.stacks && changelog.stacks.length > 0 && (
                           <div className="flex flex-wrap gap-2">
-                            {changelog.stacks.map((icon: any, i: number) => (
+                            {changelog.stacks.map((icon, i: number) => (
                               <Badge
                                 key={i}
                                 variant={"outline"}
@@ -56,39 +84,41 @@ const ProjectChangelog = ({ projects }: { projects: any }) => {
                       </div>
 
                       {/* Image des des projets */}
-                      {changelog.images && !changelog.isScale ? (
-                        <div className="prose dark:prose-invert max-w-none prose-headings:scroll-mt-8 prose-headings:font-semibold prose-a:no-underline prose-headings:tracking-tight prose-headings:text-balance prose-p:tracking-tight prose-p:text-balance">
-                          <div className={cn("aspect-88/56 mask-b-from-75% mask-b-to-95% relative", changelog.isMobile && "aspect-88/96 h-125")} >
-                            <img
-                              src={changelog.images}
-                              className="absolute inset-0 z-10"
-                              alt="payments illustration dark"
-                              width={2797}
-                              height={1137}
-                            />
-                          </div>
-                        </div>
-                      ) : (
+                      {changelog.images ? changelog.isScale ? (
                         <div className="mask-b-from-75% mask-l-from-75% mask-b-to-95% mask-l-to-95% relative -mx-4 pr-3 pt-3 md:-mx-12">
                           <div className="perspective-midrange">
                             <div className="rotate-x-6 -skew-2">
                               <div className="aspect-88/46 relative">
-                                <img
-                                   src={changelog.images}
+                                <OptimizedImage
+                                  src={changelog.images}
                                   className="absolute inset-0 z-10"
                                   alt="payments illustration dark"
                                   width={2797}
                                   height={1137}
+                                  wrapperClassName="absolute inset-0"
                                 />
                               </div>
                             </div>
                           </div>
                         </div>
-                      )}
+                      ) : (
+                        <div className="prose dark:prose-invert max-w-none prose-headings:scroll-mt-8 prose-headings:font-semibold prose-a:no-underline prose-headings:tracking-tight prose-headings:text-balance prose-p:tracking-tight prose-p:text-balance">
+                          <div className={cn("aspect-88/56 mask-b-from-75% mask-b-to-95% relative", changelog.isMobile && "aspect-88/96 h-125")} >
+                            <OptimizedImage
+                              src={changelog.images}
+                              className="absolute inset-0 z-10"
+                              alt="payments illustration dark"
+                              width={2797}
+                              height={1137}
+                              wrapperClassName="absolute inset-0"
+                            />
+                          </div>
+                        </div>
+                      ) : null}
                       {/* Reference Git ou Lien */}
                       {changelog.reference && changelog.reference.length > 0 && (
                           <div className="flex flex-wrap gap-2">
-                            {changelog.reference.map((icon: any, i: number) => (
+                            {changelog.reference.map((icon, i: number) => (
                               <Badge
                                 key={i}
                                 variant={"secondary"}
@@ -108,7 +138,7 @@ const ProjectChangelog = ({ projects }: { projects: any }) => {
                           </p>
                         )}
                         <div className="">
-                          {changelog.list.length > 0 && (
+                          {changelog.list && changelog.list.length > 0 && (
                             <blockquote className="border-l-4 pl-4 ">
                               <ul className="list-disc pl-5 space-y-1 text-left">
                                 {changelog.list.map((b: string, i: number) => (
