@@ -3,7 +3,6 @@ import { Download, Sparkles } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { BlurFade } from "./ui/blur-fade";
 import { Button } from "./ui/button";
-import { OptimizedImage } from "./ui/optimized-image";
 
 export const Hero = () => {
   return (
@@ -49,22 +48,8 @@ export const Hero = () => {
             </div>
           </div>
         </BlurFade>
-        <div className="absolute top-1/3 sm:top-25 right-0 sm:-right-20 mx-auto max-w-md  mask-[radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)]">
-          <div className="bg-transparent h-120 max-sm:w-50 shadow-xl">
-            <OptimizedImage
-              src={DATA.photo}
-              className="rounded-xl h-full w-full object-contain object-top"
-              alt={DATA.shortName ?? "payments illustration dark"}
-              width={929}
-              height={1207}
-              loading="eager"
-              fetchPriority="high"
-              wrapperClassName="h-full w-full rounded-xl"
-            />
-          </div>
-        </div>
+       
       </div>
-      {/* <h1>hello</h1> */}
     </div>
   );
 };
