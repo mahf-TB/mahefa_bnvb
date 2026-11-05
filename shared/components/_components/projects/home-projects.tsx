@@ -1,6 +1,6 @@
 import { PROJECTS } from "../../../data/projects.data";
-import ProjectChangelog from "./project-changlog";
+import { ProjectGrid } from "./project-grid";
 
 export default function HomeProjects() {
-  return <ProjectChangelog projects={PROJECTS.slice(0, 3)} />;
+  return <ProjectGrid projects={PROJECTS.slice(0, 4)} />;
 }

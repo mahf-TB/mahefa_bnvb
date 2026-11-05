@@ -1,7 +1,5 @@
 import { DATA } from "../data/data";
 import { HeaderSection } from "./_components/header-section";
-import { BlurFade } from "./ui/blur-fade";
-const BLUR_FADE_DELAY = 0.04;
 const Skills = () => {
   return (
     <div className="flex min-h-0 flex-col gap-y-8 w-full">
@@ -16,17 +14,18 @@ const Skills = () => {
   description="A solid set of technical skills to build any type of application."
 />
         <div className="flex flex-wrap gap-2">
-          {DATA.skills.map((skill, id) => (
-            <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-              <div className="border bg-background border-border ring-2 ring-border/20 rounded-full h-8 w-fit px-4 flex items-center gap-2">
-                {skill.icon && (
-                  <skill.icon className="size-4 rounded overflow-hidden object-contain" />
-                )}
-                <span className="text-foreground text-sm font-medium">
-                  {skill.name}
-                </span>
-              </div>
-            </BlurFade>
+          {DATA.skills.map((skill) => (
+            <div
+              key={skill.name}
+              className="flex h-8 w-fit items-center gap-2 rounded-full border border-border bg-background px-4 ring-2 ring-border/20"
+            >
+              {skill.icon && (
+                <skill.icon className="size-4 overflow-hidden rounded object-contain" />
+              )}
+              <span className="text-sm font-medium text-foreground">
+                {skill.name}
+              </span>
+            </div>
           ))}
         </div>
       </div>

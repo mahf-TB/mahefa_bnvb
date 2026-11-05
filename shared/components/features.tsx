@@ -4,7 +4,6 @@ import FeatureCard2 from "./_components/features/feature-card2";
 import FeatureCard3 from "./_components/features/feature-card3";
 import FeatureCard4 from "./_components/features/feature-card4";
 import { HeaderSection } from "./_components/header-section";
-import { BlurFade } from "./ui/blur-fade";
 
 
 const Features = () => {
@@ -18,8 +17,7 @@ const Features = () => {
     <div className="flex min-h-0 flex-col gap-y-8 w-full">
       <div className="flex flex-col gap-y-4 items-start justify-center">
         <HeaderSection slug="🚀 Projects & Key Skills" />
-        <BlurFade>
-          <div className="mx-auto grid gap-2 sm:grid-cols-5">
+        <div className="mx-auto grid gap-2 sm:grid-cols-5">
             <FeatureCard
               title={intsales?.title}
               description={intsales?.description}
@@ -50,8 +48,7 @@ const Features = () => {
               imageSrc={Stack?.images}
               imageAlt={Stack?.type}
             />
-          </div>
-        </BlurFade>
+        </div>
       </div>
     </div>
   );

@@ -15,8 +15,7 @@ import Contact from "../components/contact";
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <Section className="relative ">
+      <Section className="relative">
         <Hero />
       </Section>
 
@@ -28,13 +27,16 @@ export default function Home() {
           title={"My Work & Notable Projects"}
           description="Real-world applications combining performance, security, and user experience. From inventory management to financial platforms and voice assistants, each project showcases my ability to build efficient and maintainable solutions."
         />
-        {/* <ProjectDetails /> */}
         <HomeProjects />
         <div className="mt-10">
-          <Button asChild size={"lg"} className="rounded-full sm:px-10 px-3 py-5 hover:bg-primary/80">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full px-3 py-5 hover:bg-primary/80 sm:px-10"
+          >
             <Link href="/projects">
               <HugeiconsIcon icon={Work} strokeWidth={2} />
-              <span className="sm:mx-4 mx-2"> See All Projects</span>
+              <span className="mx-2 sm:mx-4">See All Projects</span>
               <HugeiconsIcon icon={ArrowRight02Icon} strokeWidth={2} />
             </Link>
           </Button>
@@ -42,19 +44,16 @@ export default function Home() {
       </Section>
 
       <div className="h-20" />
-      {/* Experience */}
       <Section>
         <WorkExperience />
       </Section>
 
       <div className="h-20" />
-      {/* Skill */}
       <Section>
         <Skills />
       </Section>
 
       <div className="h-20" />
-      {/* Education */}
       <Section>
         <Education />
       </Section>

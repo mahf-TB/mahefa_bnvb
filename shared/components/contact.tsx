@@ -1,14 +1,13 @@
 "use client";
 
-import { Button } from "./ui/button";
 import {
   Copy,
   Mail,
-  SendToMobileIcon,
   WhatsappIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import emailjs from "emailjs-com";
+import Link from "next/link";
 import { type FormEvent, useState } from "react";
 import InputForm from "./_components/input-form";
 import TextareaForm from "./_components/textarea-form";
@@ -44,19 +43,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="pt-16 ">
+    <section className="pt-16">
       <div className="mx-auto max-w-5xl">
         <div className="text-center">
-          {/* <h2 className="text-balance text-2xl font-semibold lg:text-4xl tracking-tighter ">
-            Discutons de votre projet
-          </h2>
-
-          <p className="mt-4 text-muted-foreground">
-            Contactez-moi sur WhatsApp pour un échange rapide, ou envoyez-moi un
-            email si vous préférez détailler votre besoin.
-          </p> */}
-
-          <h2 className="text-balance text-2xl font-semibold lg:text-4xl tracking-tighter">
+          <h2 className="text-balance text-2xl font-semibold tracking-tighter lg:text-4xl">
             Let’s Talk About Your Project
           </h2>
 
@@ -65,32 +55,28 @@ export default function Contact() {
             the details of your project.
           </p>
 
-          <div className="mt-10 flex  items-center justify-center gap-4 flex-row">
-            {/* Bouton WhatsApp */}
-
-            <a
+          <div className="mt-10 flex flex-row items-center justify-center gap-4">
+            <Link
               href="https://wa.me/261331718939"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-2 text-white shadow hover:bg-green-700 transition"
+              className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-2 text-white shadow transition hover:bg-green-700"
             >
               <HugeiconsIcon icon={WhatsappIcon} className="size-5" />
-              <Shimmer as={"span"} className="max-sm:text-xs text-white/80">
+              <Shimmer as="span" className="text-white/80 max-sm:text-xs">
                 Contact me on WhatsApp
               </Shimmer>
-            </a>
+            </Link>
 
-            {/* Bouton Copier le numéro */}
             <button
               onClick={() => navigator.clipboard.writeText("+261331718939")}
-              className="inline-flex items-center gap-2 rounded-xl border px-3 py-2  font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 rounded-xl border px-3 py-2 font-medium transition hover:bg-muted"
             >
               <HugeiconsIcon icon={Copy} className="size-5" />
               <span className="hidden md:block">Copy Number</span>
             </button>
           </div>
 
-          {/* SSeparator */}
           <div className="my-10 flex items-center gap-4">
             <div className="h-px flex-1 bg-border" />
             <span className="text-xs text-muted-foreground">
@@ -99,14 +85,13 @@ export default function Contact() {
             <div className="h-px flex-1 bg-border" />
           </div>
 
-          {/* Email form */}
           <form
             onSubmit={sendEmail}
             className="mx-auto max-w-md space-y-4 text-left"
           >
             {toast.message && (
               <div
-                className={`fixed bottom-10 right-10 px-6 py-3 rounded-md text-white font-medium shadow-lg transition-opacity ${
+                className={`fixed bottom-10 right-10 z-999 rounded-md px-6 py-3 font-medium text-white shadow-lg transition-opacity ${
                   toast.type === "success" ? "bg-green-500" : "bg-red-500"
                 }`}
               >
@@ -129,12 +114,12 @@ export default function Contact() {
               required
               rows={4}
               placeholder="Briefly describe your project or need..."
-              className="w-full rounded-xl  bg-background  focus:outline-none focus:ring-2 focus:ring-muted"
+              className="w-full rounded-xl bg-background focus:outline-none focus:ring-2 focus:ring-muted"
             />
 
             <button
               type="submit"
-              className="w-full rounded-xl bg-primary px-6 py-3 text-white font-medium hover:opacity-90 transition"
+              className="w-full rounded-xl bg-primary px-6 py-3 font-medium text-white transition hover:opacity-90 disabled:opacity-50"
               disabled={loading}
             >
               {loading ? "Sending..." : "Send Message"}
@@ -145,11 +130,3 @@ export default function Contact() {
     </section>
   );
 }
-
-<Button aria-label="submit" className="rounded-(--radius)">
-  <span className="hidden md:block">Contactez-moi</span>
-  <HugeiconsIcon
-    icon={SendToMobileIcon}
-    className="relative mx-auto size-5 md:hidden"
-  />
-</Button>;

@@ -1,3 +1,4 @@
+import { Docker } from "../components/icons/Docker";
 import { Expressjs } from "../components/icons/Expressjs";
 import { Figma } from "../components/icons/Figma";
 import { GitHubIcons } from "../components/icons/GitHubIcons";
@@ -20,8 +21,10 @@ import { Redis } from "../components/icons/Redis";
 import { Shadcn } from "../components/icons/shadcn";
 import { Tailwindcss } from "../components/icons/Tailwindcss";
 import { Trello } from "../components/icons/Trello";
+import { Typescript } from "../components/icons/typescript";
 import Vuejs from "../components/icons/Vuejs";
 import { Zustand } from "../components/icons/Zustand";
+import Image from "next/image";
 import Logo from "../components/logos/Logo";
 import LogoEni from "../components/logos/LogoEni";
 import LogoIntsales from "../components/logos/LogoIntsales";
@@ -30,6 +33,211 @@ import LogoOnirtech from "../components/logos/LogoOnirtech";
 import LogoSell2Door from "../components/logos/LogoSell2Door";
 
 export const PROJECTS = [
+  {
+    id: "ipayor-payment-orchestration",
+    title: "iPayor - Payment Orchestration Platform",
+    subtitle: "Fintech · Cards & Crypto",
+    description:
+      "Payment orchestration platform for card and crypto transactions, featuring intelligent multi-provider routing, hosted checkout, back-office operations, and reliable asynchronous processing.",
+    periode: "2026 - Present",
+    logo: (
+      <Image
+        src="/images/logo-ipayor.png"
+        alt="iPayor"
+        width={44}
+        height={44}
+        className="size-full object-contain"
+      />
+    ),
+    list: [
+      "Intelligent routing across multiple payment providers",
+      "Hosted checkout and operational back-office",
+      "Containerized hexagonal architecture",
+      "Asynchronous processing with queues and resilient services",
+    ],
+    stacks: [
+      {
+        title: "NestJS",
+        icon: <Nestjs className="h-5 w-5" />,
+        href: "https://nestjs.com",
+      },
+      {
+        title: "Next.js",
+        icon: <NextjsIconDark className="h-5 w-5" />,
+        href: "https://nextjs.org",
+      },
+      {
+        title: "PostgreSQL",
+        icon: <Postgresql className="h-5 w-5" />,
+        href: "https://www.postgresql.org",
+      },
+      {
+        title: "Redis",
+        icon: <Redis className="h-5 w-5" />,
+        href: "https://redis.io",
+      },
+      {
+        title: "TypeScript",
+        icon: <Typescript className="h-5 w-5" />,
+        href: "https://www.typescriptlang.org",
+      },
+      {
+        title: "Docker",
+        icon: <Docker className="h-5 w-5" />,
+        href: "https://www.docker.com",
+      },
+      {
+        title: "RabbitMQ",
+        icon: <span className="text-xs font-bold">R</span>,
+        href: "https://www.rabbitmq.com",
+      },
+      {
+        title: "OpenBao",
+        icon: <span className="text-xs font-bold">O</span>,
+        href: "https://openbao.org",
+      },
+    ],
+    reference: [
+      {
+        title: "iPayor",
+        icon: <NextjsIconDark className="h-5 w-5" />,
+        href: "https://www.ipayor.co",
+      },
+    ],
+    images: "/images/cover-ipayor.png",
+  },
+  {
+    id: "irevs-b2b-prospecting-agent",
+    title: "N8N – B2B Prospecting Automation Agent",
+    subtitle: "AI · Sales Automation",
+    description:
+      "B2B prospecting agent that collects, enriches, and qualifies leads against an ICP, generates personalized outreach, and synchronizes qualified prospects with the CRM.",
+    periode: "2026 - Present",
+    logo: (
+      <Image
+        src="/images/logo-irevs.jpeg"
+        alt="iRevs"
+        width={44}
+        height={44}
+        className="size-full object-cover"
+      />
+    ),
+    list: [
+      "Automated lead collection and enrichment",
+      "ICP-based lead qualification",
+      "Personalized message generation with OpenAI",
+      "Automatic CRM synchronization through n8n workflows",
+    ],
+    stacks: [
+      {
+        title: "OpenAI",
+        icon: <OpenAI className="h-5 w-5" />,
+        href: "https://openai.com",
+      },
+      {
+        title: "Claude AI",
+        // icon: <Nestjs className="h-5 w-5" />,
+        href: "https://nestjs.com",
+      },
+      // {
+      //   title: "",
+      //   icon: <NextjsIconDark className="h-5 w-5" />,
+      //   href: "https://nextjs.org",
+      // },
+      // {
+      //   title: "PostgreSQL",
+      //   icon: <Postgresql className="h-5 w-5" />,
+      //   href: "https://www.postgresql.org",
+      // },
+      // {
+      //   title: "React",
+      //   icon: <ReactDark className="h-5 w-5" />,
+      //   href: "https://react.dev",
+      // },
+      
+      {
+        title: "N8N",
+        // icon: <Docker className="h-5 w-5" />,
+        href: "https://www.docker.com",
+      },
+    ],
+    reference: [
+      {
+        title: "n8n iRevs",
+        icon: <OpenAI className="h-5 w-5" />,
+        href: "https://n8n.irevs.co",
+      },
+    ],
+    images: "/images/n8n.png",
+  },
+  {
+    id: "irevs-digital-platform-web-operations",
+    title: "iRevs – Digital Platform & Web Operations",
+    subtitle: "Full-Stack · DevOps",
+    description:
+      "Design, development, and maintenance of iRevs digital platforms, including frontend and backend components, CMS integrations, secure authentication, deployment workflows, and Linux server operations.",
+    periode: "2026 - Present",
+    logo: (
+      <Image
+        src="/images/logo-irevs.jpeg"
+        alt="iRevs"
+        width={44}
+        height={44}
+        className="size-full object-cover"
+      />
+    ),
+    list: [
+      "Full-stack platform and CMS development",
+      "OAuth 2.0 authentication integration",
+      "Containerized deployment and CI/CD workflows",
+      "Nginx and Ubuntu server administration",
+    ],
+    stacks: [
+      {
+        title: "Next.js",
+        icon: <NextjsIconDark className="h-5 w-5" />,
+        href: "https://nextjs.org",
+      },
+      {
+        title: "TypeScript",
+        icon: <Typescript className="h-5 w-5" />,
+        href: "https://www.typescriptlang.org",
+      },
+      {
+        title: "Docker",
+        icon: <Docker className="h-5 w-5" />,
+        href: "https://www.docker.com",
+      },
+      {
+        title: "OAuth 2.0",
+        icon: <span className="text-xs font-bold">O</span>,
+        href: "https://oauth.net/2/",
+      },
+      {
+        title: "Git",
+        icon: <GitHubIcons className="h-5 w-5" />,
+        href: "https://git-scm.com",
+      },
+      {
+        title: "Nginx",
+        icon: <span className="text-xs font-bold">N</span>,
+        href: "https://nginx.org",
+      },
+      {
+        title: "Ubuntu",
+        icon: <span className="text-xs font-bold">U</span>,
+        href: "https://ubuntu.com/server",
+      },
+    ],
+    reference: [
+      {
+        title: "iRevs",
+        icon: <NextjsIconDark className="h-5 w-5" />,
+        href: "https://www.irevs.co",
+      },
+    ],
+    images: "/images/cover-irevs.png",
+  },
   {
     id: "quincaillerie-havana",
     title: "Sales & Inventory Management System – Quincaillerie Havana",

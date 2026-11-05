@@ -1,5 +1,6 @@
 import { DATA } from "../data/data";
 import { cn } from "../lib/utils";
+import Link from "next/link";
 import AvatarUser from "./_components/avatar";
 import { HeaderSection } from "./_components/header-section";
 import { Badge } from "./ui/badge";
@@ -44,20 +45,22 @@ const WorkExperience = () => {
                   </time>
                 )}
                 {experience.title && (
-                  <a
-                    href={experience.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  experience.link ? (
+                  <Link href={experience.link} target="_blank" rel="noopener noreferrer">
                     <h3
                       className={cn(
                         "font-semibold leading-none",
-                        experience.link ? "hover:underline cursor-default" : "",
+                        "cursor-default hover:underline",
                       )}
                     >
                       {experience.title}
                     </h3>
-                  </a>
+                  </Link>
+                  ) : (
+                    <h3 className="font-semibold leading-none">
+                      {experience.title}
+                    </h3>
+                  )
                 )}
                 {experience.location && (
                   <p className="text-sm text-muted-foreground">
@@ -72,7 +75,7 @@ const WorkExperience = () => {
                 {experience.links && experience.links.length > 0 && (
                   <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
                     {experience.links.map((link, idx) => (
-                      <a
+                      <Link
                         href={link.href}
                         key={idx}
                         target="_blank"
@@ -85,7 +88,7 @@ const WorkExperience = () => {
                           {link.icon}
                           {link.title}
                         </Badge>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fr" className="dark" suppressHydrationWarning>
+    <html lang="fr" className="dark">
       <body className={`${mavenProBlack.variable} ${poppinsBlack.variable}`}>
         <Providers>
           <SectionWrapper className="min-h-screen">

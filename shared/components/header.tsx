@@ -28,76 +28,70 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "z-999 text-white fixed p-2 left-0 top-0 right-0  transition-colors",
+        "fixed inset-x-0 top-0 z-999 p-2 text-white transition-colors",
         scrolled
-          ? "backdrop-blur bg-background/95 supports-backdrop-filter:bg-background/60 "
+          ? "bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60"
           : "bg-transparent",
       )}
     >
-      <Section className="flex items-center mx-auto">
+      <Section className="flex items-center">
         <Link href="/" className="flex items-center gap-2">
-          <div className="text-lg  text-white flex items-center gap-2">
+          <div className="flex items-center gap-2 text-lg text-white">
             <AutoPopover
-              title={"Hello! I’m " + DATA.name}
+              title={`Hello! I’m ${DATA.name}`}
               description={DATA.shortDescription}
               className="w-100"
             >
               <AvatarUser
-                alt="User Avatar"
+                alt={DATA.name}
                 src="/images/me.webp"
                 fallback="MB"
                 className="size-10"
               />
             </AutoPopover>
-            <div className="text-left ml-2 max-sm:hidden">
+            <div className="ml-2 text-left max-sm:hidden">
               <span className="font-PoppinsBlack">{DATA.shortName}</span>
-              <p className="text-xs text-b">{DATA.role}</p>
+              <p className="text-xs">{DATA.role}</p>
             </div>
           </div>
         </Link>
-        <div className="flex-1"></div>
-        <ul className="flex items-center gap-2">
-          <a
+        <nav className="ml-auto flex items-center gap-2" aria-label="Primary navigation">
+          <Link
             href="https://github.com/mahf-TB"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
             className={cn(
               buttonVariants({ variant: "outline", size: "lg" }),
-              "size-10 p-0 ",
+              "size-10 p-0",
             )}
           >
-            <GitHubIcons
-              size={18}
-              className="text-white hover:text-green4 transition-colors"
-            ></GitHubIcons>
-          </a>
+            <GitHubIcons size={18} className="text-white transition-colors" />
+          </Link>
 
-          <a
+          <Link
             href="https://www.linkedin.com/in/mahefa-bienvenu-575188287/"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
             className={cn(
               buttonVariants({ variant: "outline" }),
               "size-10 p-0",
             )}
           >
-            <LinkedinIcon
-              size={18}
-              className="text-white hover:text-green4 transition-colors"
-            ></LinkedinIcon>
-          </a>
-          <a
+            <LinkedinIcon size={18} className="text-white transition-colors" />
+          </Link>
+          <Link
             href="mailto:mahefatsilavirintsoa@gmail.com"
-            target="_blank"
+            aria-label="Email"
             className={cn(
               buttonVariants({ variant: "outline" }),
               "size-10 p-0",
             )}
           >
-            <MailIcon
-              size={18}
-              className="text-white hover:text-green4 transition-colors"
-            ></MailIcon>
-          </a>
-          <a
+            <MailIcon size={18} className="text-white transition-colors" />
+          </Link>
+          <Link
             href={DATA.cvpdf}
             download
             aria-label="Télécharger CV-ANDRIMAHEFA-Fullstack"
@@ -107,8 +101,8 @@ export const Header = () => {
             )}
           >
             <HugeiconsIcon icon={DownloadIcon} strokeWidth={2} />
-          </a>
-        </ul>
+          </Link>
+        </nav>
       </Section>
     </header>
   );

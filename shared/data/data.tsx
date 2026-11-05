@@ -66,6 +66,89 @@ export const DATA = {
   ],
   experiences: [
     {
+      title: "Software Engineer - iRevs",
+      dates: "May 2026 – Present",
+      location: "Tallinn, Estonia",
+      link: "https://www.irevs.co",
+      description:
+        "Design, development, and maintenance of full-stack digital platforms across frontend, backend, CMS, and DevOps. Built a containerized payment orchestration platform for card and crypto transactions with intelligent multi-provider routing, hosted checkout, back-office tooling, hexagonal architecture, and asynchronous processing. Also developed a B2B prospecting automation agent for lead collection, enrichment, ICP qualification, personalized message generation, and automatic CRM synchronization.",
+      image: "/images/logo-irevs.jpeg",
+      links: [
+        {
+          title: "Next.js",
+          icon: <NextjsIconDark className="h-4 w-4" />,
+          href: "https://nextjs.org",
+        },
+        {
+          title: "TypeScript",
+          icon: <Typescript className="h-4 w-4" />,
+          href: "https://www.typescriptlang.org",
+        },
+        {
+          title: "NestJS",
+          icon: <Nestjs className="h-4 w-4" />,
+          href: "https://nestjs.com",
+        },
+        {
+          title: "React",
+          icon: <ReactDark className="h-4 w-4" />,
+          href: "https://react.dev",
+        },
+        {
+          title: "Turborepo",
+          href: "https://turborepo.com",
+        },
+        {
+          title: "PostgreSQL",
+          icon: <Postgresql className="h-4 w-4" />,
+          href: "https://www.postgresql.org",
+        },
+        {
+          title: "Redis",
+          icon: <Redis className="h-4 w-4" />,
+          href: "https://redis.io",
+        },
+        {
+          title: "Prisma",
+          href: "https://www.prisma.io",
+        },
+        {
+          title: "RabbitMQ",
+          href: "https://www.rabbitmq.com",
+        },
+        {
+          title: "OpenBao",
+          href: "https://openbao.org",
+        },
+        {
+          title: "Docker",
+          icon: <Docker className="h-4 w-4" />,
+          href: "https://www.docker.com",
+        },
+        {
+          title: "OpenAI",
+          href: "https://openai.com",
+        },
+        {
+          title: "CI/CD",
+          icon: <GitHubIcons className="h-4 w-4" />,
+          href: "https://docs.github.com/actions",
+        },
+        {
+          title: "OAuth 2.0",
+          href: "https://oauth.net/2/",
+        },
+        {
+          title: "Nginx",
+          href: "https://nginx.org",
+        },
+        {
+          title: "Ubuntu Server",
+          href: "https://ubuntu.com/server",
+        },
+      ],
+    },
+    {
       title: "Freelance WordPress Developer – AlteraPlus",
       dates: "August 2025",
       location: "Freelance Project – E-commerce & Training Platform",

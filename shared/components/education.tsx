@@ -1,12 +1,11 @@
-import { BLUR_FADE_DELAY } from "../constant";
 import { DATA } from "../data/data";
 import {
     Location,
     SquareArrowUpRight,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import Link from "next/link";
 import { HeaderSection } from "./_components/header-section";
-import { BlurFade } from "./ui/blur-fade";
 import { OptimizedImage } from "./ui/optimized-image";
 
 const Education = () => {
@@ -22,66 +21,60 @@ const Education = () => {
   title="My Academic Journey"
   description="A solid and continuous education to stay at the forefront of development."
 />
-        <div className="flex flex-col gap-8 w-full">
-          {DATA.education.map((education, index) => (
-            <BlurFade
-              key={education.school}
-              delay={BLUR_FADE_DELAY * 8 + index * 0.05}
+        <div className="flex w-full flex-col gap-8">
+          {DATA.education.map((education, i) => (
+            <Link
+              key={i}
+              href={education.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col justify-between gap-2 sm:flex-row sm:items-center sm:gap-3"
             >
-              <a
-                href={education.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex sm:flex-row flex-col sm:items-center  sm:gap-3 gap-2 justify-between group"
-              >
-                <div className="flex items-center gap-x-3 flex-1 min-w-0">
-                  {education.logoUrl ? (
-                    <OptimizedImage
-                      src={education.logoUrl}
-                      alt={education.school}
-                      className="size-10 md:size-14 bg-white p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
-                      wrapperClassName="size-10 md:size-14 rounded-full"
-                    />
-                  ) : (
-                    <div className="size-10 md:size-14 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
-                  )}
-                  <div className="flex-1 min-w-0 flex flex-col gap-0.5">
-                    <div className="font-semibold leading-none flex items-center gap-2">
-                      {education.school}
-                      {education.href && (
-                        <HugeiconsIcon
-                          icon={SquareArrowUpRight}
-                          name="external-link"
-                          className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
-                          aria-hidden
-                        />
-                      )}
-                    </div>
-                    <div className="font-sans text-left text-sm text-muted-foreground">
-                      {education.degree}
-                    </div>
-                    <div className="font-sans text-left text-sm text-muted-foreground">
+              <div className="flex min-w-0 flex-1 items-center gap-x-3">
+                {education.logoUrl ? (
+                  <OptimizedImage
+                    src={education.logoUrl}
+                    alt={education.school}
+                    className="size-10 flex-none overflow-hidden rounded-full border bg-white p-1 object-contain shadow ring-2 ring-border md:size-14"
+                    wrapperClassName="size-10 md:size-14 rounded-full"
+                  />
+                ) : (
+                  <div className="size-10 flex-none rounded-full border bg-muted p-1 shadow ring-2 ring-border md:size-14" />
+                )}
+                <div className="flex min-w-0 flex-1 flex-col gap-0.5">
+                  <div className="flex items-center gap-2 font-semibold leading-none">
+                    {education.school}
+                    {education.href && (
                       <HugeiconsIcon
-                        icon={Location}
-                        name="location"
-                        className="h-3.5 w-3.5 inline-block mr-1 text-muted-foreground"
+                        icon={SquareArrowUpRight}
+                        name="external-link"
+                        className="h-3.5 w-3.5 -translate-x-2 text-muted-foreground opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
                         aria-hidden
                       />
-                      {education.location}
-                    </div>
+                    )}
+                  </div>
+                  <div className="text-left font-sans text-sm text-muted-foreground">
+                    {education.degree}
+                  </div>
+                  <div className="text-left font-sans text-sm text-muted-foreground">
+                    <HugeiconsIcon
+                      icon={Location}
+                      name="location"
+                      className="mr-1 inline-block h-3.5 w-3.5 text-muted-foreground"
+                      aria-hidden
+                    />
+                    {education.location}
                   </div>
                 </div>
-                <div className="flex items-center ml-12 gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
-                  {education.start === education.end ? (
-                    <span>{education.start}</span>
-                  ) : (
-                    <span>
-                      {education.start} - {education.end}
-                    </span>
-                  )}
-                </div>
-              </a>
-            </BlurFade>
+              </div>
+              <div className="ml-12 flex flex-none items-center gap-1 text-right text-xs tabular-nums text-muted-foreground">
+                {education.start === education.end ? (
+                  <span>{education.start}</span>
+                ) : (
+                  <span>{education.start} - {education.end}</span>
+                )}
+              </div>
+            </Link>
           ))}
         </div>
       </div>
