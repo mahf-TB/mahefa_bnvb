@@ -134,31 +134,30 @@ export const PROJECTS = [
         icon: <OpenAI className="h-5 w-5" />,
         href: "https://openai.com",
       },
-      {
-        title: "Claude AI",
-        // icon: <Nestjs className="h-5 w-5" />,
-        href: "https://nestjs.com",
-      },
+     
       // {
       //   title: "",
       //   icon: <NextjsIconDark className="h-5 w-5" />,
       //   href: "https://nextjs.org",
       // },
-      // {
-      //   title: "PostgreSQL",
-      //   icon: <Postgresql className="h-5 w-5" />,
-      //   href: "https://www.postgresql.org",
-      // },
-      // {
-      //   title: "React",
-      //   icon: <ReactDark className="h-5 w-5" />,
-      //   href: "https://react.dev",
-      // },
-      
+      {
+        title: "PostgreSQL",
+        icon: <Postgresql className="h-5 w-5" />,
+        href: "https://www.postgresql.org",
+      },
+      {
+        title: "React",
+        icon: <ReactDark className="h-5 w-5" />,
+        href: "https://react.dev",
+      },
       {
         title: "N8N",
         // icon: <Docker className="h-5 w-5" />,
         href: "https://www.docker.com",
+      }, {
+        title: "Claude AI",
+        // icon: <Nestjs className="h-5 w-5" />,
+        href: "https://nestjs.com",
       },
     ],
     reference: [
